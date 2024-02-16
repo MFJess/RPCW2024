@@ -1,0 +1,182 @@
+@prefix : <http://www.semanticweb.org/jess/ontologies/2024/1/plantas/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/jess/ontologies/2024/1/plantas/> .
+
+<http://www.semanticweb.org/jess/ontologies/2024/1/plantas> rdf:type owl:Ontology ;
+                                                             owl:versionIRI <http://www.semanticweb.org/jess/ontologies/2024/1/plantas> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas/contem
+:contem rdf:type owl:ObjectProperty ;
+        owl:inverseOf :temRua ;
+        rdfs:domain :Rua ;
+        rdfs:range :Planta .
+
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas/temRua
+:temRua rdf:type owl:ObjectProperty ;
+        rdfs:domain :Planta ;
+        rdfs:range :Rua .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas/Caldeira
+:Caldeira rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Planta ;
+          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas/Código_de_rua
+:Código_de_rua rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Rua ;
+               rdfs:range xsd:long .
+
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas/Data_de_Plantação
+:Data_de_Plantação rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Planta ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas/Data_de_actualização
+:Data_de_actualização rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Planta ;
+                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas/Espécie
+:Espécie rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Planta ;
+         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas/Estado
+:Estado rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Planta ;
+        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas/Freguesia
+:Freguesia rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Rua ;
+           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas/Gestor
+:Gestor rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Planta ;
+        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas/Id
+:Id rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Planta ;
+    rdfs:range xsd:long .
+
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas/Implantação
+:Implantação rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Planta ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas/Local
+:Local rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Rua ;
+       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas/Nome_científico
+:Nome_científico rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Planta ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas/Número_de_Intervenções
+:Número_de_Intervenções rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :Planta ;
+                        rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas/Número_de_Registo
+:Número_de_Registo rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Planta ;
+                   rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas/Origem
+:Origem rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Planta ;
+        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas/Rua
+:Rua rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Planta ,
+                 :Rua ;
+     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas/Tutor
+:Tutor rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Planta ;
+       rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas/Planta
+:Planta rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas/Rua
+:Rua rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas#1685467
+<http://www.semanticweb.org/jess/ontologies/2024/1/plantas#1685467> rdf:type owl:NamedIndividual ,
+                                                                             :Rua ;
+                                                                    :contem <http://www.semanticweb.org/jess/ontologies/2024/1/plantas#20615557> ;
+                                                                    :Código_de_rua "1685467"^^xsd:long ;
+                                                                    :Freguesia "Alcabideche" ;
+                                                                    :Local "Zambujeiro" ;
+                                                                    :Rua "Rua Júlio Dinis" .
+
+
+###  http://www.semanticweb.org/jess/ontologies/2024/1/plantas#20615557
+<http://www.semanticweb.org/jess/ontologies/2024/1/plantas#20615557> rdf:type owl:NamedIndividual ,
+                                                                              :Planta ;
+                                                                     :temRua <http://www.semanticweb.org/jess/ontologies/2024/1/plantas#1685467> ;
+                                                                     :Caldeira "Sim" ;
+                                                                     :Data_de_Plantação "" ;
+                                                                     :Data_de_actualização "" ,
+                                                                                           "23/07/2021 19:50:54" ;
+                                                                     :Espécie "pinheiro manso" ;
+                                                                     :Estado "Adulto" ;
+                                                                     :Gestor "DGEV" ;
+                                                                     :Implantação "Arruamento" ;
+                                                                     :Nome_científico "Pinus pinea" ;
+                                                                     :Número_de_Intervenções "6"^^xsd:int ;
+                                                                     :Número_de_Registo "3"^^xsd:int ;
+                                                                     :Origem "" ;
+                                                                     :Rua "Rua Júlio Dinis" ;
+                                                                     :Tutor "Sim" .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
