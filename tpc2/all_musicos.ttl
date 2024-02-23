@@ -1,0 +1,5471 @@
+@prefix : <http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15/> .
+
+<http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#ensinadoNoCurso
+:ensinadoNoCurso rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :instrumentoEnsinado ;
+                 rdfs:domain :Instrumento ;
+                 rdfs:range :Curso .
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#instrumentoEnsinado
+:instrumentoEnsinado rdf:type owl:ObjectProperty .
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15/estuda
+:estuda rdf:type owl:ObjectProperty ;
+        owl:inverseOf :estudadoPor ;
+        rdfs:domain :Aluno .
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15/estudadoPor
+:estudadoPor rdf:type owl:ObjectProperty ;
+             rdfs:range :Aluno .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#AlunoAno
+:AlunoAno rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Aluno ;
+          rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#AlunoCurso
+:AlunoCurso rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Aluno ;
+            rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#AlunoId
+:AlunoId rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Aluno ;
+         rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#AlunoInstrumento
+:AlunoInstrumento rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Aluno ;
+                  rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#AlunoNascimento
+:AlunoNascimento rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Aluno ;
+                 rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#AlunoNome
+:AlunoNome rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Aluno ;
+           rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CursoDesignacao
+:CursoDesignacao rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Curso ;
+                 rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CursoDuracao
+:CursoDuracao rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Curso ;
+              rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CursoId
+:CursoId rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Curso ;
+         rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#InstrumentoId
+:InstrumentoId rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Instrumento ;
+               rdfs:range xsd:string .
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#InstrumentoNome
+:InstrumentoNome rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Instrumento ;
+                 rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#Curso
+:Curso rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15/Aluno
+:Aluno rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15/Instrumento
+:Instrumento rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A1510
+:A1510 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB8 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB8" ;
+        :AlunoId "A1510" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "1999-4-19" ;
+        :AlunoNome "ADEMAR FONTES DE MAGALHAES GONCALVES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A32597
+:A32597 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS19 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS19" ;
+        :AlunoId "A32597" ;
+        :AlunoInstrumento "Violoncelo" ;
+        :AlunoNascimento "2004-9-5" ;
+        :AlunoNome "ADERITO NELSON MIRANDA DE OLIVEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A36539
+:A36539 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS21 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS21" ;
+        :AlunoId "A36539" ;
+        :AlunoInstrumento "Viola de Arco" ;
+        :AlunoNascimento "2002-10-26" ;
+        :AlunoNome "ADMILSON CESAR ANDRADE RODRIGUES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38165
+:A38165 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB5 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB5" ;
+        :AlunoId "A38165" ;
+        :AlunoInstrumento "Fagote" ;
+        :AlunoNascimento "1996-2-25" ;
+        :AlunoNome "AFONSO DELERUE ARRIAGA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38176
+:A38176 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB5 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB5" ;
+        :AlunoId "A38176" ;
+        :AlunoInstrumento "Fagote" ;
+        :AlunoNascimento "2000-7-18" ;
+        :AlunoNome "AGOSTINHO MANUEL ALVES DA SILVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38196
+:A38196 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB14 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB14" ;
+        :AlunoId "A38196" ;
+        :AlunoInstrumento "Saxofone" ;
+        :AlunoNascimento "1997-12-7" ;
+        :AlunoNome "ALEXANDRE COELHO CARVALHO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35271
+:A35271 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS6 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS6" ;
+        :AlunoId "A35271" ;
+        :AlunoInstrumento "Flauta" ;
+        :AlunoNascimento "2002-12-20" ;
+        :AlunoNome "ALEXANDRE JORGE CAMELO FARIA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38193
+:A38193 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB17 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB17" ;
+        :AlunoId "A38193" ;
+        :AlunoInstrumento "Trompete" ;
+        :AlunoNascimento "2001-2-2" ;
+        :AlunoNome "ALEXANDRE MANUEL PEREIRA DE MIRANDA PINTO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A18141
+:A18141 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB11 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB11" ;
+        :AlunoId "A18141" ;
+        :AlunoInstrumento "Orgão" ;
+        :AlunoNascimento "2001-6-23" ;
+        :AlunoNome "ALEXANDRE MIGUEL DA COSTA FERREIRA DOS SANTOS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38218
+:A38218 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS13 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS13" ;
+        :AlunoId "A38218" ;
+        :AlunoInstrumento "Piano" ;
+        :AlunoNascimento "2002-7-14" ;
+        :AlunoNome "ALEXANDRINA MARIA FERREIRA LEMOS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A36487
+:A36487 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB17 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB17" ;
+        :AlunoId "A36487" ;
+        :AlunoInstrumento "Trompete" ;
+        :AlunoNascimento "1996-1-7" ;
+        :AlunoNome "ALI DOS REIS MOTA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35272
+:A35272 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB10 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB10" ;
+        :AlunoId "A35272" ;
+        :AlunoInstrumento "Oboé" ;
+        :AlunoNascimento "1997-11-7" ;
+        :AlunoNome "ANA LUISA PARREIRA NUNES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A27589
+:A27589 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS9 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS9" ;
+        :AlunoId "A27589" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "2002-1-13" ;
+        :AlunoNome "ANA MARGARIDA FIDALGO PINHEIRO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A25073
+:A25073 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS19 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS19" ;
+        :AlunoId "A25073" ;
+        :AlunoInstrumento "Violoncelo" ;
+        :AlunoNascimento "2003-12-12" ;
+        :AlunoNome "ANA MARGARIDA LIMA ALEM" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38169
+:A38169 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB4 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB4" ;
+        :AlunoId "A38169" ;
+        :AlunoInstrumento "Eufónio" ;
+        :AlunoNascimento "1999-6-5" ;
+        :AlunoNome "ANDRE ABILIO NUNES ROCHA RODRIGUES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33822
+:A33822 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB1 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB1" ;
+        :AlunoId "A33822" ;
+        :AlunoInstrumento "Clarinete" ;
+        :AlunoNascimento "2001-11-13" ;
+        :AlunoNome "ANDRE FERNANDES MARTINS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38214
+:A38214 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB9 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB9" ;
+        :AlunoId "A38214" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "1997-2-14" ;
+        :AlunoNome "ANDRE FILIPE DE SOUSA VIVEIROS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35274
+:A35274 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS21 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS21" ;
+        :AlunoId "A35274" ;
+        :AlunoInstrumento "Viola de Arco" ;
+        :AlunoNascimento "2003-7-20" ;
+        :AlunoNome "ANDRE FILIPE OLIVEIRA MARTINS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A29871
+:A29871 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB14 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB14" ;
+        :AlunoId "A29871" ;
+        :AlunoInstrumento "Saxofone" ;
+        :AlunoNascimento "1997-8-1" ;
+        :AlunoNome "ANDRE LEITE FERREIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38215
+:A38215 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB16 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB16" ;
+        :AlunoId "A38215" ;
+        :AlunoInstrumento "Trompa" ;
+        :AlunoNascimento "1998-5-28" ;
+        :AlunoNome "ANDRE RIBEIRO RODRIGUES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38117
+:A38117 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS19 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS19" ;
+        :AlunoId "A38117" ;
+        :AlunoInstrumento "Violoncelo" ;
+        :AlunoNascimento "2002-2-20" ;
+        :AlunoNome "ANTONIO ANDRE MARQUES RIBEIRO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35277
+:A35277 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS2 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS2" ;
+        :AlunoId "A35277" ;
+        :AlunoInstrumento "Contrabaixo" ;
+        :AlunoNascimento "2002-5-5" ;
+        :AlunoNome "ANTONIO MANUEL MARTINS PINTO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35278
+:A35278 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB2 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB2" ;
+        :AlunoId "A35278" ;
+        :AlunoInstrumento "Contrabaixo" ;
+        :AlunoNascimento "2001-3-13" ;
+        :AlunoNome "ANTONIO MANUEL RODRIGUES FERNANDES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38138
+:A38138 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB22 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB22" ;
+        :AlunoId "A38138" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "1998-10-7" ;
+        :AlunoNome "ANTONIO NUNO BACELAR MARTINS BARREIRO COVAS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35280
+:A35280 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB5 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB5" ;
+        :AlunoId "A35280" ;
+        :AlunoInstrumento "Fagote" ;
+        :AlunoNascimento "1997-2-10" ;
+        :AlunoNome "ANTONIO RICARDO PEREIRA GONCALVES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33057
+:A33057 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB8 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB8" ;
+        :AlunoId "A33057" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "1999-7-5" ;
+        :AlunoNome "ANTONIO RUI MIRANDA DE LEMOS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38143
+:A38143 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB3 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB3" ;
+        :AlunoId "A38143" ;
+        :AlunoInstrumento "Corne Inglês" ;
+        :AlunoNascimento "2000-1-9" ;
+        :AlunoNome "ANTONIO SERGIO MATOS SILVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A30166
+:A30166 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB17 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB17" ;
+        :AlunoId "A30166" ;
+        :AlunoInstrumento "Trompete" ;
+        :AlunoNascimento "2001-9-6" ;
+        :AlunoNome "ANTONIO TIAGO MORGADO PEREIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A36971
+:A36971 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB22 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB22" ;
+        :AlunoId "A36971" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "2001-4-2" ;
+        :AlunoNome "AUGUSTO JORGE PEREIRA DA COSTA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38132
+:A38132 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS21 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS21" ;
+        :AlunoId "A38132" ;
+        :AlunoInstrumento "Viola de Arco" ;
+        :AlunoNascimento "2002-4-6" ;
+        :AlunoNome "AVELINO JOSE DA COSTA REGO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33140
+:A33140 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS7 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS7" ;
+        :AlunoId "A33140" ;
+        :AlunoInstrumento "Fliscorne" ;
+        :AlunoNascimento "2005-2-11" ;
+        :AlunoNome "AVELINO RODRIGO ARAUJO SEMELHE DE SOUSA PINTO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33141
+:A33141 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB7 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB7" ;
+        :AlunoId "A33141" ;
+        :AlunoInstrumento "Fliscorne" ;
+        :AlunoNascimento "1997-8-23" ;
+        :AlunoNome "BARBARA ALEXANDRA EUSEBIO FREITAS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33291
+:A33291 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB8 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB8" ;
+        :AlunoId "A33291" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "1996-9-28" ;
+        :AlunoNome "BARBARA SOFIA ARAUJO DA SILVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33142
+:A33142 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS1 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS1" ;
+        :AlunoId "A33142" ;
+        :AlunoInstrumento "Clarinete" ;
+        :AlunoNascimento "2004-11-16" ;
+        :AlunoNome "BRUNO CESAR PEREIRA DA SILVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A20044
+:A20044 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB9 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB9" ;
+        :AlunoId "A20044" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "1999-7-28" ;
+        :AlunoNome "BRUNO DE ALMEIDA RAMOS PEREIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35283
+:A35283 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB13 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB13" ;
+        :AlunoId "A35283" ;
+        :AlunoInstrumento "Piano" ;
+        :AlunoNascimento "1999-2-22" ;
+        :AlunoNome "BRUNO EDGAR BERNARDO TEIXEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35284
+:A35284 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS8 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS8" ;
+        :AlunoId "A35284" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "2005-6-4" ;
+        :AlunoNome "BRUNO EMANUEL TEIXEIRA DE CASTRO ARAUJO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38156
+:A38156 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB6 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB6" ;
+        :AlunoId "A38156" ;
+        :AlunoInstrumento "Flauta" ;
+        :AlunoNascimento "2000-6-11" ;
+        :AlunoNome "BRUNO FILIPE DA COSTA HERMENEGILDO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35285
+:A35285 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB8 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB8" ;
+        :AlunoId "A35285" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "1999-4-14" ;
+        :AlunoNome "BRUNO GABRIEL LEAL MACHADO DOS SANTOS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A36422
+:A36422 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB20 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB20" ;
+        :AlunoId "A36422" ;
+        :AlunoInstrumento "Violino" ;
+        :AlunoNascimento "1999-2-14" ;
+        :AlunoNome "BRUNO JOSE DE MACEDO SOARES AMOR" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33143
+:A33143 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB3 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB3" ;
+        :AlunoId "A33143" ;
+        :AlunoInstrumento "Corne Inglês" ;
+        :AlunoNascimento "1997-3-20" ;
+        :AlunoNome "BRUNO MIGUEL CAMPOS RODRIGUES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33145
+:A33145 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB21 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB21" ;
+        :AlunoId "A33145" ;
+        :AlunoInstrumento "Viola de Arco" ;
+        :AlunoNascimento "1997-6-20" ;
+        :AlunoNome "BRUNO MIGUEL FLORES DIAMANTINO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33146
+:A33146 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS18 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS18" ;
+        :AlunoId "A33146" ;
+        :AlunoInstrumento "Tuba" ;
+        :AlunoNascimento "2003-11-15" ;
+        :AlunoNome "BRUNO MIGUEL MAGALHAES AZEVEDO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33148
+:A33148 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB15 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB15" ;
+        :AlunoId "A33148" ;
+        :AlunoInstrumento "Trombone" ;
+        :AlunoNascimento "1998-3-21" ;
+        :AlunoNome "BRUNO MIGUEL TEIXEIRA PAIVA DE FARIA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38124
+:A38124 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB22 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB22" ;
+        :AlunoId "A38124" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "2000-1-21" ;
+        :AlunoNome "BRUNO RICARDO CUNHA MAGALHAES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A30176
+:A30176 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB18 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB18" ;
+        :AlunoId "A30176" ;
+        :AlunoInstrumento "Tuba" ;
+        :AlunoNascimento "1998-4-14" ;
+        :AlunoNome "BRUNO RICARDO DUARTE MAGALHAES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35808
+:A35808 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS7 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS7" ;
+        :AlunoId "A35808" ;
+        :AlunoInstrumento "Fliscorne" ;
+        :AlunoNascimento "2002-11-11" ;
+        :AlunoNome "CANDIDO MIGUEL REBELO BARROS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38126
+:A38126 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS16 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS16" ;
+        :AlunoId "A38126" ;
+        :AlunoInstrumento "Trompa" ;
+        :AlunoNascimento "2005-6-14" ;
+        :AlunoNome "CARLOS ALFREDO MACIEIRA DE FARIA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33689
+:A33689 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB2 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB2" ;
+        :AlunoId "A33689" ;
+        :AlunoInstrumento "Contrabaixo" ;
+        :AlunoNascimento "2001-5-10" ;
+        :AlunoNome "CARLOS ANDRE BRITO RIBEIRO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38125
+:A38125 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS8 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS8" ;
+        :AlunoId "A38125" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "2002-5-13" ;
+        :AlunoNome "CARLOS CESAR MADUREIRA ROMANO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A24654
+:A24654 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS14 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS14" ;
+        :AlunoId "A24654" ;
+        :AlunoInstrumento "Saxofone" ;
+        :AlunoNascimento "2005-11-2" ;
+        :AlunoNome "CARLOS DE SOUSA CABRAL BRANDAO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A20021
+:A20021 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB19 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB19" ;
+        :AlunoId "A20021" ;
+        :AlunoInstrumento "Violoncelo" ;
+        :AlunoNascimento "1999-12-4" ;
+        :AlunoNome "CARLOS JOSE DA CUNHA RIBEIRO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35291
+:A35291 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB15 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB15" ;
+        :AlunoId "A35291" ;
+        :AlunoInstrumento "Trombone" ;
+        :AlunoNascimento "1998-6-17" ;
+        :AlunoNome "CARLOS MIGUEL TAVARES LOPES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A34640
+:A34640 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS3 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS3" ;
+        :AlunoId "A34640" ;
+        :AlunoInstrumento "Corne Inglês" ;
+        :AlunoNascimento "2002-8-9" ;
+        :AlunoNome "CARLOS PRUDENCIO DO ESPIRITO CRISOSTOMO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38207
+:A38207 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS2 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS2" ;
+        :AlunoId "A38207" ;
+        :AlunoInstrumento "Contrabaixo" ;
+        :AlunoNascimento "2003-8-22" ;
+        :AlunoNome "CATARINA ISABEL DE OLIVEIRA MATEUS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A32010
+:A32010 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS10 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS10" ;
+        :AlunoId "A32010" ;
+        :AlunoInstrumento "Oboé" ;
+        :AlunoNascimento "2005-9-1" ;
+        :AlunoNome "CATARINA SOFIA MARTINHO LUIS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35052
+:A35052 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB2 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB2" ;
+        :AlunoId "A35052" ;
+        :AlunoInstrumento "Contrabaixo" ;
+        :AlunoNascimento "1996-5-24" ;
+        :AlunoNome "CESAR FILIPE DA CRUZ GOMES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35440
+:A35440 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS18 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS18" ;
+        :AlunoId "A35440" ;
+        :AlunoInstrumento "Tuba" ;
+        :AlunoNascimento "2002-6-26" ;
+        :AlunoNome "DANIEL BARBOSA ALVES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A32648
+:A32648 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS5 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS5" ;
+        :AlunoId "A32648" ;
+        :AlunoInstrumento "Fagote" ;
+        :AlunoNascimento "2002-1-23" ;
+        :AlunoNome "DANIEL FILIPE PERES FERREIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33152
+:A33152 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB20 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB20" ;
+        :AlunoId "A33152" ;
+        :AlunoInstrumento "Violino" ;
+        :AlunoNascimento "2001-10-12" ;
+        :AlunoNome "DANIEL RICARDO DE CASTRO MENDES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38211
+:A38211 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS12 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS12" ;
+        :AlunoId "A38211" ;
+        :AlunoInstrumento "Percussão" ;
+        :AlunoNascimento "2003-8-16" ;
+        :AlunoNome "DANIEL TORRES GONCALVES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38210
+:A38210 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB5 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB5" ;
+        :AlunoId "A38210" ;
+        :AlunoInstrumento "Fagote" ;
+        :AlunoNascimento "1998-7-10" ;
+        :AlunoNome "DANIELA CRISTINA GARCIA TEIXEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A22854
+:A22854 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB5 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB5" ;
+        :AlunoId "A22854" ;
+        :AlunoInstrumento "Fagote" ;
+        :AlunoNascimento "1999-3-10" ;
+        :AlunoNome "DAVI CARNEIRO PEREIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35293
+:A35293 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB6 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB6" ;
+        :AlunoId "A35293" ;
+        :AlunoInstrumento "Flauta" ;
+        :AlunoNascimento "1999-11-22" ;
+        :AlunoNome "DAVID DANIEL CARDOSO DE OLIVEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35294
+:A35294 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB20 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB20" ;
+        :AlunoId "A35294" ;
+        :AlunoInstrumento "Violino" ;
+        :AlunoNascimento "1996-11-20" ;
+        :AlunoNome "DIAMANTINO JOSE MADEIRA ABOBELEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38166
+:A38166 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB19 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB19" ;
+        :AlunoId "A38166" ;
+        :AlunoInstrumento "Violoncelo" ;
+        :AlunoNascimento "2000-6-26" ;
+        :AlunoNome "DIOGO FILIPE DA SILVA CARDOSO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38164
+:A38164 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS8 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS8" ;
+        :AlunoId "A38164" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "2004-8-28" ;
+        :AlunoNome "DIOGO PAULO DA FONTE LAPA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38167
+:A38167 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS22 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS22" ;
+        :AlunoId "A38167" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "2002-7-20" ;
+        :AlunoNome "DUARTE ALEXANDRE DA CUNHA ALVES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33155
+:A33155 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS1 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS1" ;
+        :AlunoId "A33155" ;
+        :AlunoInstrumento "Clarinete" ;
+        :AlunoNascimento "2002-4-2" ;
+        :AlunoNome "DUARTE FILIPE AFONSO CHAVES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35298
+:A35298 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB3 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB3" ;
+        :AlunoId "A35298" ;
+        :AlunoInstrumento "Corne Inglês" ;
+        :AlunoNascimento "1999-5-10" ;
+        :AlunoNome "DUARTE NUNO MALHEIRO DE BARREIRO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38190
+:A38190 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS15 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS15" ;
+        :AlunoId "A38190" ;
+        :AlunoInstrumento "Trombone" ;
+        :AlunoNascimento "2005-3-14" ;
+        :AlunoNome "ELISEU CARNEIRO DOS SANTOS ROCHA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35300
+:A35300 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB10 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB10" ;
+        :AlunoId "A35300" ;
+        :AlunoInstrumento "Oboé" ;
+        :AlunoNascimento "2001-2-15" ;
+        :AlunoNome "EMANUEL CERDEIRA MESQUITA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A30305
+:A30305 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS19 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS19" ;
+        :AlunoId "A30305" ;
+        :AlunoInstrumento "Violoncelo" ;
+        :AlunoNascimento "2004-4-15" ;
+        :AlunoNome "EMANUEL JOSE ANTUNES FERNANDES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A36757
+:A36757 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS8 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS8" ;
+        :AlunoId "A36757" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "2002-6-6" ;
+        :AlunoNome "ERNESTO MANUEL DA SILVA LOPES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33157
+:A33157 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS1 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS1" ;
+        :AlunoId "A33157" ;
+        :AlunoInstrumento "Clarinete" ;
+        :AlunoNascimento "2005-1-23" ;
+        :AlunoNome "EURICO MANUEL FOLGADO AFONSO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A27608
+:A27608 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB15 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB15" ;
+        :AlunoId "A27608" ;
+        :AlunoInstrumento "Trombone" ;
+        :AlunoNascimento "1999-5-12" ;
+        :AlunoNome "EURICO MANUEL TELES MORAIS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35302
+:A35302 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB11 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB11" ;
+        :AlunoId "A35302" ;
+        :AlunoInstrumento "Orgão" ;
+        :AlunoNascimento "1996-8-19" ;
+        :AlunoNome "FABIO ROBERTO LEITE MATOS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33158
+:A33158 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS5 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS5" ;
+        :AlunoId "A33158" ;
+        :AlunoInstrumento "Fagote" ;
+        :AlunoNascimento "2003-1-11" ;
+        :AlunoNome "FAUSTO MIGUEL PACHECO FARIA VIANA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35465
+:A35465 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB19 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB19" ;
+        :AlunoId "A35465" ;
+        :AlunoInstrumento "Violoncelo" ;
+        :AlunoNascimento "1999-2-21" ;
+        :AlunoNome "FERNANDO ANTONIO ALVES LOPES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33858
+:A33858 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB13 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB13" ;
+        :AlunoId "A33858" ;
+        :AlunoInstrumento "Piano" ;
+        :AlunoNascimento "1999-7-13" ;
+        :AlunoNome "FERNANDO JORGE PINTO LIMA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A26737
+:A26737 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS16 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS16" ;
+        :AlunoId "A26737" ;
+        :AlunoInstrumento "Trompa" ;
+        :AlunoNascimento "2005-7-26" ;
+        :AlunoNome "FERNANDO MIGUEL SOUSA LISBOA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A30187
+:A30187 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS9 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS9" ;
+        :AlunoId "A30187" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "2005-1-26" ;
+        :AlunoNome "FERNANDO SERGIO MADALENO PEREIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35303
+:A35303 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB1 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB1" ;
+        :AlunoId "A35303" ;
+        :AlunoInstrumento "Clarinete" ;
+        :AlunoNascimento "1999-5-8" ;
+        :AlunoNome "FILIPE ANTONIO GONCALVES DA SILVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A36445
+:A36445 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB22 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB22" ;
+        :AlunoId "A36445" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "2001-9-25" ;
+        :AlunoNome "FILIPE BARROSO DE OLIVEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38595
+:A38595 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB2 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB2" ;
+        :AlunoId "A38595" ;
+        :AlunoInstrumento "Contrabaixo" ;
+        :AlunoNascimento "1999-4-2" ;
+        :AlunoNome "FILIPE GONCALO GONCALVES DA COSTA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38187
+:A38187 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB10 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB10" ;
+        :AlunoId "A38187" ;
+        :AlunoInstrumento "Oboé" ;
+        :AlunoNascimento "1996-6-19" ;
+        :AlunoNome "FLAVIO MIGUEL XAVIER FERREIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A36424
+:A36424 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB11 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB11" ;
+        :AlunoId "A36424" ;
+        :AlunoInstrumento "Orgão" ;
+        :AlunoNascimento "2001-5-14" ;
+        :AlunoNome "FRANCISCO EURICO PINTO CORTEZ MARTINS LEITE" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35308
+:A35308 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB21 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB21" ;
+        :AlunoId "A35308" ;
+        :AlunoInstrumento "Viola de Arco" ;
+        :AlunoNascimento "1996-6-2" ;
+        :AlunoNome "FRANCISCO JOSE MAIO LEITE" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35443
+:A35443 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS22 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS22" ;
+        :AlunoId "A35443" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "2002-4-6" ;
+        :AlunoNome "FRANCISCO JOSE MARTINS GOMES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A27616
+:A27616 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB21 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB21" ;
+        :AlunoId "A27616" ;
+        :AlunoInstrumento "Viola de Arco" ;
+        :AlunoNascimento "1996-7-3" ;
+        :AlunoNome "FRANCISCO JOSE PRATA DA PAZ" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38163
+:A38163 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB2 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB2" ;
+        :AlunoId "A38163" ;
+        :AlunoInstrumento "Contrabaixo" ;
+        :AlunoNascimento "1996-4-23" ;
+        :AlunoNome "GASPAR AUGUSTO SIMOES CORREIA VIEIRA LEITE" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A39288
+:A39288 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS15 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS15" ;
+        :AlunoId "A39288" ;
+        :AlunoInstrumento "Trombone" ;
+        :AlunoNascimento "2005-2-22" ;
+        :AlunoNome "GENILDO SOARES NEVES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33162
+:A33162 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS5 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS5" ;
+        :AlunoId "A33162" ;
+        :AlunoInstrumento "Fagote" ;
+        :AlunoNascimento "2003-3-25" ;
+        :AlunoNome "GONCALO LEAL MACHADO RIBEIRO PINTO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35311
+:A35311 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS22 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS22" ;
+        :AlunoId "A35311" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "2005-3-5" ;
+        :AlunoNome "GONCALO LUIS MALHEIRO DE OLIVEIRA NOVAIS MACHADO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A39508
+:A39508 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS5 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS5" ;
+        :AlunoId "A39508" ;
+        :AlunoInstrumento "Fagote" ;
+        :AlunoNascimento "2005-8-15" ;
+        :AlunoNome "GONCALO MANUEL CORREIA CALHEIROS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33163
+:A33163 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS21 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS21" ;
+        :AlunoId "A33163" ;
+        :AlunoInstrumento "Viola de Arco" ;
+        :AlunoNascimento "2004-4-6" ;
+        :AlunoNome "GONCALO PAULO CUNHA CARDOSO FERREIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38174
+:A38174 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS12 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS12" ;
+        :AlunoId "A38174" ;
+        :AlunoInstrumento "Percussão" ;
+        :AlunoNascimento "2003-12-14" ;
+        :AlunoNome "GUILHERME REIS BARBOSA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33165
+:A33165 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS13 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS13" ;
+        :AlunoId "A33165" ;
+        :AlunoInstrumento "Piano" ;
+        :AlunoNascimento "2004-7-5" ;
+        :AlunoNome "HELDER ARTUR PEIXOTO MAGALHAES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35312
+:A35312 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS13 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS13" ;
+        :AlunoId "A35312" ;
+        :AlunoInstrumento "Piano" ;
+        :AlunoNascimento "2002-4-11" ;
+        :AlunoNome "HELDER FILIPE DE CASTRO MARQUES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38185
+:A38185 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB6 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB6" ;
+        :AlunoId "A38185" ;
+        :AlunoInstrumento "Flauta" ;
+        :AlunoNascimento "1996-6-21" ;
+        :AlunoNome "HELDER JOSE FERREIRA BARBOSA RIBEIRO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A39503
+:A39503 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS10 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS10" ;
+        :AlunoId "A39503" ;
+        :AlunoInstrumento "Oboé" ;
+        :AlunoNascimento "2005-3-4" ;
+        :AlunoNome "HELDER NUNO MARTINS DO VALE TOME" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A36758
+:A36758 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS21 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS21" ;
+        :AlunoId "A36758" ;
+        :AlunoInstrumento "Viola de Arco" ;
+        :AlunoNascimento "2003-4-20" ;
+        :AlunoNome "HUGO ALEXANDRE PEREIRA TRIUNFANTE MARTINS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38197
+:A38197 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS8 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS8" ;
+        :AlunoId "A38197" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "2004-8-6" ;
+        :AlunoNome "HUGO ALEXANDRE SOBREIRO DE SEIXAS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33272
+:A33272 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB9 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB9" ;
+        :AlunoId "A33272" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "1998-2-21" ;
+        :AlunoNome "HUGO ANDRE PEIXOTO FREITAS PEREIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35315
+:A35315 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS6 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS6" ;
+        :AlunoId "A35315" ;
+        :AlunoInstrumento "Flauta" ;
+        :AlunoNascimento "2004-1-28" ;
+        :AlunoNome "HUGO EMANUEL QUEIROS TEIXEIRA DA SILVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38202
+:A38202 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB6 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB6" ;
+        :AlunoId "A38202" ;
+        :AlunoInstrumento "Flauta" ;
+        :AlunoNascimento "2000-4-4" ;
+        :AlunoNome "HUGO FILIPE NASCIMENTO PEREIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35316
+:A35316 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB15 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB15" ;
+        :AlunoId "A35316" ;
+        :AlunoInstrumento "Trombone" ;
+        :AlunoNascimento "2001-2-21" ;
+        :AlunoNome "HUGO GUILHERME DOS SANTOS RIGOR" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35395
+:A35395 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB20 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB20" ;
+        :AlunoId "A35395" ;
+        :AlunoInstrumento "Violino" ;
+        :AlunoNascimento "1997-6-25" ;
+        :AlunoNome "HUGO JOSE FERNANDES CARVALHO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38204
+:A38204 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB7 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB7" ;
+        :AlunoId "A38204" ;
+        :AlunoInstrumento "Fliscorne" ;
+        :AlunoNascimento "1997-10-2" ;
+        :AlunoNome "HUGO JOSE PEREIRA PACHECO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A26208
+:A26208 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB22 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB22" ;
+        :AlunoId "A26208" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "1998-7-8" ;
+        :AlunoNome "IGOR MURILO DE ALMEIDA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33703
+:A33703 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB22 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB22" ;
+        :AlunoId "A33703" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "1996-10-28" ;
+        :AlunoNome "ISABEL MARIA ROSENDO CARDOSO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38134
+:A38134 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS17 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS17" ;
+        :AlunoId "A38134" ;
+        :AlunoInstrumento "Trompete" ;
+        :AlunoNascimento "2002-6-10" ;
+        :AlunoNome "IVO MANUEL DANTAS MONTEIRO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35318
+:A35318 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS14 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS14" ;
+        :AlunoId "A35318" ;
+        :AlunoInstrumento "Saxofone" ;
+        :AlunoNascimento "2004-4-25" ;
+        :AlunoNome "JASON PETER COSTA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33168
+:A33168 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB9 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB9" ;
+        :AlunoId "A33168" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "2000-10-13" ;
+        :AlunoNome "JOANA SOUTO DE MIRANDA GONZALEZ" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35319
+:A35319 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS19 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS19" ;
+        :AlunoId "A35319" ;
+        :AlunoInstrumento "Violoncelo" ;
+        :AlunoNascimento "2004-6-12" ;
+        :AlunoNome "JOAO ALEXANDRE VAZ OLIVEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35320
+:A35320 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB19 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB19" ;
+        :AlunoId "A35320" ;
+        :AlunoInstrumento "Violoncelo" ;
+        :AlunoNascimento "2001-2-9" ;
+        :AlunoNome "JOAO ANTONIO LAVRADOR VILANOVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A32753
+:A32753 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB5 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB5" ;
+        :AlunoId "A32753" ;
+        :AlunoInstrumento "Fagote" ;
+        :AlunoNascimento "1998-11-26" ;
+        :AlunoNome "JOAO ARNALDO FREITAS DE ABREU" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38180
+:A38180 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS7 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS7" ;
+        :AlunoId "A38180" ;
+        :AlunoInstrumento "Fliscorne" ;
+        :AlunoNascimento "2005-11-9" ;
+        :AlunoNome "JOAO CARLOS AZEVEDO SALGADO GUIMARAES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35321
+:A35321 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB21 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB21" ;
+        :AlunoId "A35321" ;
+        :AlunoInstrumento "Viola de Arco" ;
+        :AlunoNascimento "1996-3-27" ;
+        :AlunoNome "JOAO FILIPE FONTES MACHADO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35322
+:A35322 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS9 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS9" ;
+        :AlunoId "A35322" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "2005-5-17" ;
+        :AlunoNome "JOAO GILBERTO LAMARAO DA SILVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38133
+:A38133 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB15 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB15" ;
+        :AlunoId "A38133" ;
+        :AlunoInstrumento "Trombone" ;
+        :AlunoNascimento "1998-3-7" ;
+        :AlunoNome "JOAO GONCALO BOTICA RIBEIRO DA SILVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A30201
+:A30201 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS7 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS7" ;
+        :AlunoId "A30201" ;
+        :AlunoInstrumento "Fliscorne" ;
+        :AlunoNascimento "2005-3-5" ;
+        :AlunoNome "JOAO GUILHERME RABACA CAMPOS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38123
+:A38123 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB3 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB3" ;
+        :AlunoId "A38123" ;
+        :AlunoInstrumento "Corne Inglês" ;
+        :AlunoNascimento "1998-7-26" ;
+        :AlunoNome "JOAO MANUEL DA SILVA SANCHES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A34935
+:A34935 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS1 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS1" ;
+        :AlunoId "A34935" ;
+        :AlunoInstrumento "Clarinete" ;
+        :AlunoNascimento "2003-2-17" ;
+        :AlunoNome "JOAO MANUEL DE CAMPOS GONCALVES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35323
+:A35323 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB4 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB4" ;
+        :AlunoId "A35323" ;
+        :AlunoInstrumento "Eufónio" ;
+        :AlunoNascimento "1998-1-16" ;
+        :AlunoNome "JOAO MARIO MENDES DE OLIVEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33172
+:A33172 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB21 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB21" ;
+        :AlunoId "A33172" ;
+        :AlunoInstrumento "Viola de Arco" ;
+        :AlunoNascimento "1999-2-11" ;
+        :AlunoNome "JOAO MIGUEL RAPOSO DA SILVA MARQUES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38191
+:A38191 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB8 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB8" ;
+        :AlunoId "A38191" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "1997-3-21" ;
+        :AlunoNome "JOAO MIGUEL RODRIGUES BATISTA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38186
+:A38186 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS22 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS22" ;
+        :AlunoId "A38186" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "2003-5-3" ;
+        :AlunoNome "JOAO NUNO MARQUES DOS SANTOS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A39750
+:A39750 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB2 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB2" ;
+        :AlunoId "A39750" ;
+        :AlunoInstrumento "Contrabaixo" ;
+        :AlunoNascimento "1997-3-5" ;
+        :AlunoNome "JOAO PAULO BARBOSA OLIVEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A22662
+:A22662 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS12 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS12" ;
+        :AlunoId "A22662" ;
+        :AlunoInstrumento "Percussão" ;
+        :AlunoNascimento "2005-10-12" ;
+        :AlunoNome "JOAO PAULO CARRAPATO ALMEIDA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35325
+:A35325 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS9 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS9" ;
+        :AlunoId "A35325" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "2004-9-25" ;
+        :AlunoNome "JOAO PAULO COELHO GOMES TEIXEIRA E OLIVEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A17855
+:A17855 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS5 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS5" ;
+        :AlunoId "A17855" ;
+        :AlunoInstrumento "Fagote" ;
+        :AlunoNascimento "2004-9-1" ;
+        :AlunoNome "JOAO PAULO DA SILVA CASTRO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38175
+:A38175 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB6 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB6" ;
+        :AlunoId "A38175" ;
+        :AlunoInstrumento "Flauta" ;
+        :AlunoNascimento "2001-5-26" ;
+        :AlunoNome "JOAO PAULO DA SILVA GOMES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33173
+:A33173 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS20 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS20" ;
+        :AlunoId "A33173" ;
+        :AlunoInstrumento "Violino" ;
+        :AlunoNascimento "2003-1-2" ;
+        :AlunoNome "JOAO PAULO MINHAVA PEIXOTO ASSIS CARDOSO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A39622
+:A39622 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS19 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS19" ;
+        :AlunoId "A39622" ;
+        :AlunoInstrumento "Violoncelo" ;
+        :AlunoNascimento "2002-1-6" ;
+        :AlunoNome "JOAO PAULO SILVA DE VASCONCELOS GUSMAO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33175
+:A33175 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB22 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB22" ;
+        :AlunoId "A33175" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "2001-10-25" ;
+        :AlunoNome "JOAO PEDRO BACAO COELHO DE BARROS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A18938
+:A18938 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS13 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS13" ;
+        :AlunoId "A18938" ;
+        :AlunoInstrumento "Piano" ;
+        :AlunoNascimento "2003-10-28" ;
+        :AlunoNome "JOAO PEDRO BRITO ANTUNES GUIMARAES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33176
+:A33176 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS20 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS20" ;
+        :AlunoId "A33176" ;
+        :AlunoInstrumento "Violino" ;
+        :AlunoNascimento "2004-6-26" ;
+        :AlunoNome "JOAO PEDRO GOMES FERNANDES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35832
+:A35832 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS12 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS12" ;
+        :AlunoId "A35832" ;
+        :AlunoInstrumento "Percussão" ;
+        :AlunoNascimento "2002-5-1" ;
+        :AlunoNome "JOAO PEDRO GONCALVES DE CARVALHO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38170
+:A38170 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS17 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS17" ;
+        :AlunoId "A38170" ;
+        :AlunoInstrumento "Trompete" ;
+        :AlunoNascimento "2003-4-19" ;
+        :AlunoNome "JOAO PEDRO OLIVEIRA PEREIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A36425
+:A36425 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS20 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS20" ;
+        :AlunoId "A36425" ;
+        :AlunoInstrumento "Violino" ;
+        :AlunoNascimento "2002-6-6" ;
+        :AlunoNome "JOAO PEDRO ROBALO ESPINHO PEREIRA DA SILVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38212
+:A38212 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB4 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB4" ;
+        :AlunoId "A38212" ;
+        :AlunoInstrumento "Eufónio" ;
+        :AlunoNascimento "1998-5-3" ;
+        :AlunoNome "JOAO PEDRO SILVA ARAUJO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38220
+:A38220 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB8 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB8" ;
+        :AlunoId "A38220" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "1999-11-4" ;
+        :AlunoNome "JOAO RAFAEL FERREIRA VELOSO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38199
+:A38199 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB5 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB5" ;
+        :AlunoId "A38199" ;
+        :AlunoInstrumento "Fagote" ;
+        :AlunoNascimento "1999-3-26" ;
+        :AlunoNome "JOAO RICARDO DA SILVA CAMPOS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38198
+:A38198 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB14 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB14" ;
+        :AlunoId "A38198" ;
+        :AlunoInstrumento "Saxofone" ;
+        :AlunoNascimento "2001-10-15" ;
+        :AlunoNome "JOAQUIM MACHADO GONCALVES SAMPAIO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35328
+:A35328 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB19 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB19" ;
+        :AlunoId "A35328" ;
+        :AlunoInstrumento "Violoncelo" ;
+        :AlunoNascimento "1997-4-17" ;
+        :AlunoNome "JOEL ARAUJO ROCHA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38157
+:A38157 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS21 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS21" ;
+        :AlunoId "A38157" ;
+        :AlunoInstrumento "Viola de Arco" ;
+        :AlunoNascimento "2003-7-15" ;
+        :AlunoNome "JOEL HUMBERTO DA SILVA BEIRAO DO VALE CARVALHO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A20464
+:A20464 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS21 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS21" ;
+        :AlunoId "A20464" ;
+        :AlunoInstrumento "Viola de Arco" ;
+        :AlunoNascimento "2004-3-22" ;
+        :AlunoNome "JOEL TITO DA CRUZ PINTO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38139
+:A38139 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB7 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB7" ;
+        :AlunoId "A38139" ;
+        :AlunoInstrumento "Fliscorne" ;
+        :AlunoNascimento "1997-4-7" ;
+        :AlunoNome "JORGE ALBERTO FARIA MIRANDA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35330
+:A35330 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS13 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS13" ;
+        :AlunoId "A35330" ;
+        :AlunoInstrumento "Piano" ;
+        :AlunoNascimento "2002-8-24" ;
+        :AlunoNome "JORGE ANDRE ALVES DE MELO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A16409
+:A16409 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS10 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS10" ;
+        :AlunoId "A16409" ;
+        :AlunoInstrumento "Oboé" ;
+        :AlunoNascimento "2005-2-18" ;
+        :AlunoNome "JORGE MANUEL DE CASTRO MAIO GOMES DA COSTA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33709
+:A33709 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS12 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS12" ;
+        :AlunoId "A33709" ;
+        :AlunoInstrumento "Percussão" ;
+        :AlunoNascimento "2005-8-2" ;
+        :AlunoNome "JORGE MANUEL VIANA RIBEIRO MARTINS FORTE" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A30209
+:A30209 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB15 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB15" ;
+        :AlunoId "A30209" ;
+        :AlunoInstrumento "Trombone" ;
+        :AlunoNascimento "1997-4-26" ;
+        :AlunoNome "JORGE MIGUEL GONCALVES DA SILVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A21008
+:A21008 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB2 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB2" ;
+        :AlunoId "A21008" ;
+        :AlunoInstrumento "Contrabaixo" ;
+        :AlunoNascimento "1998-6-11" ;
+        :AlunoNome "JORGE MIGUEL SILVA MELO PEREIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35331
+:A35331 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS22 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS22" ;
+        :AlunoId "A35331" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "2003-3-20" ;
+        :AlunoNome "JOSE ALEXANDRE DE CARVALHO AMORIM" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38189
+:A38189 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB3 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB3" ;
+        :AlunoId "A38189" ;
+        :AlunoInstrumento "Corne Inglês" ;
+        :AlunoNascimento "1998-8-3" ;
+        :AlunoNome "JOSE ANTONIO DA CUNHA E SILVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A19705
+:A19705 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS11 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS11" ;
+        :AlunoId "A19705" ;
+        :AlunoInstrumento "Orgão" ;
+        :AlunoNascimento "2004-1-12" ;
+        :AlunoNome "JOSE ANTONIO PEREIRA CIBRAO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A30211
+:A30211 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB5 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB5" ;
+        :AlunoId "A30211" ;
+        :AlunoInstrumento "Fagote" ;
+        :AlunoNascimento "1997-6-3" ;
+        :AlunoNome "JOSE CARLOS CARVALHO DOS SANTOS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A30212
+:A30212 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB10 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB10" ;
+        :AlunoId "A30212" ;
+        :AlunoInstrumento "Oboé" ;
+        :AlunoNascimento "2001-4-6" ;
+        :AlunoNome "JOSE CARLOS DA ROCHA MACHADO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A36960
+:A36960 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB17 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB17" ;
+        :AlunoId "A36960" ;
+        :AlunoInstrumento "Trompete" ;
+        :AlunoNascimento "1999-9-13" ;
+        :AlunoNome "JOSE CARLOS DE FREITAS FONTAO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A34434
+:A34434 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS13 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS13" ;
+        :AlunoId "A34434" ;
+        :AlunoInstrumento "Piano" ;
+        :AlunoNascimento "2004-7-1" ;
+        :AlunoNome "JOSE CARLOS MARQUES DIAS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35332
+:A35332 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB13 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB13" ;
+        :AlunoId "A35332" ;
+        :AlunoInstrumento "Piano" ;
+        :AlunoNascimento "2001-11-5" ;
+        :AlunoNome "JOSE DIOGO RIBEIRO LIZ DE ALMEIDA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A39506
+:A39506 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB18 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB18" ;
+        :AlunoId "A39506" ;
+        :AlunoInstrumento "Tuba" ;
+        :AlunoNascimento "1999-6-1" ;
+        :AlunoNome "JOSE EDUARDO CORREIA CALHEIROS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A36761
+:A36761 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB14 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB14" ;
+        :AlunoId "A36761" ;
+        :AlunoInstrumento "Saxofone" ;
+        :AlunoNascimento "2001-12-11" ;
+        :AlunoNome "JOSE EDUARDO TEIXEIRA RITO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38224
+:A38224 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB12 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB12" ;
+        :AlunoId "A38224" ;
+        :AlunoInstrumento "Percussão" ;
+        :AlunoNascimento "1999-2-12" ;
+        :AlunoNome "JOSE FILIPE HENRIQUES VILAS BOAS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35333
+:A35333 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB19 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB19" ;
+        :AlunoId "A35333" ;
+        :AlunoInstrumento "Violoncelo" ;
+        :AlunoNascimento "1999-11-9" ;
+        :AlunoNome "JOSE FILIPE QUEIJO FERNANDES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A23916
+:A23916 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB3 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB3" ;
+        :AlunoId "A23916" ;
+        :AlunoInstrumento "Corne Inglês" ;
+        :AlunoNascimento "1997-9-4" ;
+        :AlunoNome "JOSE GRACA DA NOBREGA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38222
+:A38222 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS17 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS17" ;
+        :AlunoId "A38222" ;
+        :AlunoInstrumento "Trompete" ;
+        :AlunoNascimento "2002-8-4" ;
+        :AlunoNome "JOSE LUIS CARDOSO SILVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38205
+:A38205 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB3 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB3" ;
+        :AlunoId "A38205" ;
+        :AlunoInstrumento "Corne Inglês" ;
+        :AlunoNascimento "1996-2-19" ;
+        :AlunoNome "JOSE LUIS LOPES DE ARAUJO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A27629
+:A27629 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS22 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS22" ;
+        :AlunoId "A27629" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "2002-8-25" ;
+        :AlunoNome "JOSE LUIS PINTO MONTEIRO ALVES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38206
+:A38206 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS9 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS9" ;
+        :AlunoId "A38206" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "2005-4-11" ;
+        :AlunoNome "JOSE MANUEL ARAUJO SOARES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35398
+:A35398 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS6 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS6" ;
+        :AlunoId "A35398" ;
+        :AlunoInstrumento "Flauta" ;
+        :AlunoNascimento "2005-10-19" ;
+        :AlunoNome "JOSE MANUEL ESTEVES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A32480
+:A32480 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB10 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB10" ;
+        :AlunoId "A32480" ;
+        :AlunoInstrumento "Oboé" ;
+        :AlunoNascimento "1999-5-10" ;
+        :AlunoNome "JOSE MANUEL LIMA GANDARELA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A30213
+:A30213 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB16 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB16" ;
+        :AlunoId "A30213" ;
+        :AlunoInstrumento "Trompa" ;
+        :AlunoNascimento "2001-1-4" ;
+        :AlunoNome "JOSE MANUEL LOUREIRO DE AZEVEDO TEIXEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A22670
+:A22670 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB1 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB1" ;
+        :AlunoId "A22670" ;
+        :AlunoInstrumento "Clarinete" ;
+        :AlunoNascimento "1999-10-28" ;
+        :AlunoNome "JOSE MANUEL TEIXEIRA FERNANDES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33182
+:A33182 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS18 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS18" ;
+        :AlunoId "A33182" ;
+        :AlunoInstrumento "Tuba" ;
+        :AlunoNascimento "2005-8-14" ;
+        :AlunoNome "JOSE MIGUEL DOS SANTOS FERRAZ" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A28722
+:A28722 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS3 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS3" ;
+        :AlunoId "A28722" ;
+        :AlunoInstrumento "Corne Inglês" ;
+        :AlunoNascimento "2003-10-26" ;
+        :AlunoNome "JOSE MIGUEL FERREIRA PONTES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38121
+:A38121 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS9 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS9" ;
+        :AlunoId "A38121" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "2003-1-26" ;
+        :AlunoNome "JOSE MIGUEL RODRIGUES OLIVEIRA DA SILVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35334
+:A35334 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB19 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB19" ;
+        :AlunoId "A35334" ;
+        :AlunoInstrumento "Violoncelo" ;
+        :AlunoNascimento "2001-9-20" ;
+        :AlunoNome "JOSE MIGUEL SILVA PEIXOTO DE CARVALHO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38136
+:A38136 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB9 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB9" ;
+        :AlunoId "A38136" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "1998-6-7" ;
+        :AlunoNome "JOSE NUNO MARTINS PINTO FRAGA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35335
+:A35335 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB1 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB1" ;
+        :AlunoId "A35335" ;
+        :AlunoInstrumento "Clarinete" ;
+        :AlunoNascimento "1996-9-26" ;
+        :AlunoNome "JOSE PAULO CARNEIRO DE MELO MAMEDE" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35337
+:A35337 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS6 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS6" ;
+        :AlunoId "A35337" ;
+        :AlunoInstrumento "Flauta" ;
+        :AlunoNascimento "2003-12-11" ;
+        :AlunoNome "JOSE PEDRO DOMINGUES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38142
+:A38142 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB21 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB21" ;
+        :AlunoId "A38142" ;
+        :AlunoInstrumento "Viola de Arco" ;
+        :AlunoNascimento "1996-12-15" ;
+        :AlunoNome "JOSE PEDRO FARIA E VASCONCELOS CORREIA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38140
+:A38140 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS14 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS14" ;
+        :AlunoId "A38140" ;
+        :AlunoInstrumento "Saxofone" ;
+        :AlunoNascimento "2002-9-5" ;
+        :AlunoNome "JOSE PEDRO MACHADO GOMES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38137
+:A38137 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB5 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB5" ;
+        :AlunoId "A38137" ;
+        :AlunoInstrumento "Fagote" ;
+        :AlunoNascimento "2000-2-23" ;
+        :AlunoNome "JOSE PEDRO RIBEIRO DA ARAUJO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38128
+:A38128 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS4 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS4" ;
+        :AlunoId "A38128" ;
+        :AlunoInstrumento "Eufónio" ;
+        :AlunoNascimento "2005-6-13" ;
+        :AlunoNome "JOSE PEDRO RODRIGUES MAGALHAES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A30214
+:A30214 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB12 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB12" ;
+        :AlunoId "A30214" ;
+        :AlunoInstrumento "Percussão" ;
+        :AlunoNascimento "2001-3-15" ;
+        :AlunoNome "JOSE PEDRO SILVA DE OLIVEIRA CARVALHO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A23508
+:A23508 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB15 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB15" ;
+        :AlunoId "A23508" ;
+        :AlunoInstrumento "Trombone" ;
+        :AlunoNascimento "1998-4-7" ;
+        :AlunoNome "JOSE ROMEU FERNANDES PINTO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38155
+:A38155 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB12 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB12" ;
+        :AlunoId "A38155" ;
+        :AlunoInstrumento "Percussão" ;
+        :AlunoNascimento "1996-9-16" ;
+        :AlunoNome "JULIO ANDRE RODRIGUES ARAUJO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35843
+:A35843 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS19 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS19" ;
+        :AlunoId "A35843" ;
+        :AlunoInstrumento "Violoncelo" ;
+        :AlunoNascimento "2002-3-9" ;
+        :AlunoNome "LARA SOFIA ALPOIM MIRANDA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38150
+:A38150 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB5 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB5" ;
+        :AlunoId "A38150" ;
+        :AlunoInstrumento "Fagote" ;
+        :AlunoNascimento "1999-4-27" ;
+        :AlunoNome "LEANDRO EMANUEL DA SILVA SALGADO BARBOSA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A34035
+:A34035 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS9 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS9" ;
+        :AlunoId "A34035" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "2005-2-27" ;
+        :AlunoNome "LEONOR ISABEL CONSTANTINO CAEIRO BOGA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A24839
+:A24839 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS5 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS5" ;
+        :AlunoId "A24839" ;
+        :AlunoInstrumento "Fagote" ;
+        :AlunoNascimento "2003-12-16" ;
+        :AlunoNome "LEONOR ISABEL FERREIRA DE MELO OSORIO ARAUJO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35339
+:A35339 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS2 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS2" ;
+        :AlunoId "A35339" ;
+        :AlunoInstrumento "Contrabaixo" ;
+        :AlunoNascimento "2004-6-23" ;
+        :AlunoNome "LIDIA NOGUEIRA LARANJEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35340
+:A35340 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB21 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB21" ;
+        :AlunoId "A35340" ;
+        :AlunoInstrumento "Viola de Arco" ;
+        :AlunoNascimento "1999-2-22" ;
+        :AlunoNome "LILIANA SOLANGE SEQUEIRA HENRIQUES DE MACEDO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33650
+:A33650 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB16 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB16" ;
+        :AlunoId "A33650" ;
+        :AlunoInstrumento "Trompa" ;
+        :AlunoNascimento "2000-7-24" ;
+        :AlunoNome "LUIS ANDRE DA CUNHA MARQUES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35342
+:A35342 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS14 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS14" ;
+        :AlunoId "A35342" ;
+        :AlunoInstrumento "Saxofone" ;
+        :AlunoNascimento "2002-2-20" ;
+        :AlunoNome "LUIS CARLOS GONCALO LEONARDO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38223
+:A38223 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB3 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB3" ;
+        :AlunoId "A38223" ;
+        :AlunoInstrumento "Corne Inglês" ;
+        :AlunoNascimento "1998-8-13" ;
+        :AlunoNome "LUIS DIOGO MONTEIRO DUARTE COUTO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A39341
+:A39341 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS8 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS8" ;
+        :AlunoId "A39341" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "2003-11-28" ;
+        :AlunoNome "LUIS FERNANDO ROMANEL RODRIGUES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A39408
+:A39408 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB7 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB7" ;
+        :AlunoId "A39408" ;
+        :AlunoInstrumento "Fliscorne" ;
+        :AlunoNascimento "2000-3-16" ;
+        :AlunoNome "LUIS FILIPE FARIA MONTEIRO CAPELO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33186
+:A33186 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS10 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS10" ;
+        :AlunoId "A33186" ;
+        :AlunoInstrumento "Oboé" ;
+        :AlunoNascimento "2002-8-10" ;
+        :AlunoNome "LUIS FILIPE GAMA PAIS CABRAL" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38219
+:A38219 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS18 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS18" ;
+        :AlunoId "A38219" ;
+        :AlunoInstrumento "Tuba" ;
+        :AlunoNascimento "2005-11-4" ;
+        :AlunoNome "LUIS FILIPE PEREIRA GONCALVES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A29631
+:A29631 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB5 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB5" ;
+        :AlunoId "A29631" ;
+        :AlunoInstrumento "Fagote" ;
+        :AlunoNascimento "2001-6-19" ;
+        :AlunoNome "LUIS FILIPE RIBEIRO NOVAIS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A39747
+:A39747 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS10 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS10" ;
+        :AlunoId "A39747" ;
+        :AlunoInstrumento "Oboé" ;
+        :AlunoNascimento "2005-5-19" ;
+        :AlunoNome "LUIS PEDRO FERREIRA LEITE DOS SANTOS ALEIXO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33188
+:A33188 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS15 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS15" ;
+        :AlunoId "A33188" ;
+        :AlunoInstrumento "Trombone" ;
+        :AlunoNascimento "2002-3-12" ;
+        :AlunoNome "LUIS PEDRO LOPES PEREIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38172
+:A38172 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB1 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB1" ;
+        :AlunoId "A38172" ;
+        :AlunoInstrumento "Clarinete" ;
+        :AlunoNascimento "2000-2-21" ;
+        :AlunoNome "LUIS TIAGO AFONSO MASCARENHAS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38168
+:A38168 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS8 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS8" ;
+        :AlunoId "A38168" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "2005-8-2" ;
+        :AlunoNome "LUIZ ALBERTO DE CASTRO SANTOS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38254
+:A38254 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB16 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB16" ;
+        :AlunoId "A38254" ;
+        :AlunoInstrumento "Trompa" ;
+        :AlunoNascimento "2001-4-27" ;
+        :AlunoNome "MANUEL DOMINGOS DE CARVALHO FELGUEIRAS DA SILVA SANTOS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A30219
+:A30219 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB4 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB4" ;
+        :AlunoId "A30219" ;
+        :AlunoInstrumento "Eufónio" ;
+        :AlunoNascimento "2001-3-16" ;
+        :AlunoNome "MANUEL FERNANDO SOTO MAIOR FRANQUEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35348
+:A35348 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS8 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS8" ;
+        :AlunoId "A35348" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "2002-2-24" ;
+        :AlunoNome "MANUEL JOSE GOMES MEIRELES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A27637
+:A27637 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB18 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB18" ;
+        :AlunoId "A27637" ;
+        :AlunoInstrumento "Tuba" ;
+        :AlunoNascimento "1999-12-22" ;
+        :AlunoNome "MANUEL JOSE TORRES SOUSA DA CUNHA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A29004
+:A29004 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB1 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB1" ;
+        :AlunoId "A29004" ;
+        :AlunoInstrumento "Clarinete" ;
+        :AlunoNascimento "1999-4-22" ;
+        :AlunoNome "MARANGAZE JOAQUIM MUNHEPE MULHANGA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35349
+:A35349 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB6 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB6" ;
+        :AlunoId "A35349" ;
+        :AlunoInstrumento "Flauta" ;
+        :AlunoNascimento "1997-1-26" ;
+        :AlunoNome "MARCIA MARLENE DE ALMEIDA MARTINS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35350
+:A35350 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB22 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB22" ;
+        :AlunoId "A35350" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "1996-11-20" ;
+        :AlunoNome "MARCIAL COELHO GOMES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A39406
+:A39406 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS8 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS8" ;
+        :AlunoId "A39406" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "2003-6-22" ;
+        :AlunoNome "MARCO ALEXANDRE AGUIAR VAZ" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A29011
+:A29011 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB2 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB2" ;
+        :AlunoId "A29011" ;
+        :AlunoInstrumento "Contrabaixo" ;
+        :AlunoNascimento "1998-12-22" ;
+        :AlunoNome "MARCO ALEXANDRE BARREIRA MEDEIROS TEIXEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38178
+:A38178 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB2 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB2" ;
+        :AlunoId "A38178" ;
+        :AlunoInstrumento "Contrabaixo" ;
+        :AlunoNascimento "1999-6-9" ;
+        :AlunoNome "MARCO ALEXANDRE TEIXEIRA PALOS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38152
+:A38152 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS16 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS16" ;
+        :AlunoId "A38152" ;
+        :AlunoInstrumento "Trompa" ;
+        :AlunoNascimento "2005-5-14" ;
+        :AlunoNome "MARCO ANTONIO SAMPAIO FREITAS DE CASTRO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38179
+:A38179 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS15 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS15" ;
+        :AlunoId "A38179" ;
+        :AlunoInstrumento "Trombone" ;
+        :AlunoNascimento "2003-11-13" ;
+        :AlunoNome "MARCO ANTONIO TEIXEIRA MARTINS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A22685
+:A22685 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS12 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS12" ;
+        :AlunoId "A22685" ;
+        :AlunoInstrumento "Percussão" ;
+        :AlunoNascimento "2004-8-28" ;
+        :AlunoNome "MARCO FRANCISCO DA SILVA LIZARDO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A22688
+:A22688 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB8 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB8" ;
+        :AlunoId "A22688" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "2001-4-3" ;
+        :AlunoNome "MARCO RICARDO BARBOSA COELHO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A36864
+:A36864 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS11 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS11" ;
+        :AlunoId "A36864" ;
+        :AlunoInstrumento "Orgão" ;
+        :AlunoNascimento "2003-7-19" ;
+        :AlunoNome "MARIA BEATRIZ ALVES DE SA CAMPOS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38184
+:A38184 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS7 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS7" ;
+        :AlunoId "A38184" ;
+        :AlunoInstrumento "Fliscorne" ;
+        :AlunoNascimento "2005-10-1" ;
+        :AlunoNome "MARIA CRISTINA CARNEIRO BARREIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A12753
+:A12753 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB16 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB16" ;
+        :AlunoId "A12753" ;
+        :AlunoInstrumento "Trompa" ;
+        :AlunoNascimento "1998-3-8" ;
+        :AlunoNome "MARIA LUISA VILLAVERDE MACHADO FERNANDES NOVAIS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38161
+:A38161 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS4 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS4" ;
+        :AlunoId "A38161" ;
+        :AlunoInstrumento "Eufónio" ;
+        :AlunoNascimento "2002-6-24" ;
+        :AlunoNome "MARIANA PEREIRA NEVES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38171
+:A38171 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS22 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS22" ;
+        :AlunoId "A38171" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "2005-12-22" ;
+        :AlunoNome "MARIO ANDRE PATRICIO TEIXEIRA JULIO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38194
+:A38194 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB11 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB11" ;
+        :AlunoId "A38194" ;
+        :AlunoInstrumento "Orgão" ;
+        :AlunoNascimento "1999-7-23" ;
+        :AlunoNome "MARIO DA FONTE LAMEIRAS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A23544
+:A23544 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB3 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB3" ;
+        :AlunoId "A23544" ;
+        :AlunoInstrumento "Corne Inglês" ;
+        :AlunoNascimento "2000-3-12" ;
+        :AlunoNome "MARIO RUI ANUNCIACAO MONTEIRO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A29048
+:A29048 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB2 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB2" ;
+        :AlunoId "A29048" ;
+        :AlunoInstrumento "Contrabaixo" ;
+        :AlunoNascimento "1996-2-14" ;
+        :AlunoNome "MARIO RUI RIBEIRO FIALHO DA CONCEICAO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A36454
+:A36454 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB15 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB15" ;
+        :AlunoId "A36454" ;
+        :AlunoInstrumento "Trombone" ;
+        :AlunoNascimento "1999-4-17" ;
+        :AlunoNome "MICHEL FERREIRA PINTO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35352
+:A35352 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB8 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB8" ;
+        :AlunoId "A35352" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "2001-4-14" ;
+        :AlunoNome "MIGUEL AFONSO PIRES DA ROSA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38217
+:A38217 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB8 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB8" ;
+        :AlunoId "A38217" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "2001-4-13" ;
+        :AlunoNome "MIGUEL ANGELO MARQUES DE MATOS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38209
+:A38209 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS17 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS17" ;
+        :AlunoId "A38209" ;
+        :AlunoInstrumento "Trompete" ;
+        :AlunoNascimento "2005-9-24" ;
+        :AlunoNome "MIGUEL ANGELO PINTO MARQUES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A30226
+:A30226 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS3 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS3" ;
+        :AlunoId "A30226" ;
+        :AlunoInstrumento "Corne Inglês" ;
+        :AlunoNascimento "2002-3-12" ;
+        :AlunoNome "MIGUEL ANGELO RIBEIRO DE SOUSA E SILVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38221
+:A38221 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB13 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB13" ;
+        :AlunoId "A38221" ;
+        :AlunoInstrumento "Piano" ;
+        :AlunoNascimento "1996-2-13" ;
+        :AlunoNome "MIGUEL ANGELO VIVAS GOMES ALVES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A21432
+:A21432 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS9 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS9" ;
+        :AlunoId "A21432" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "2004-12-14" ;
+        :AlunoNome "MIGUEL MANUEL GOMES RODRIGUES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A39342
+:A39342 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB22 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB22" ;
+        :AlunoId "A39342" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "2001-11-27" ;
+        :AlunoNome "MIGUEL PEDRO AMARAL FIGUEIREDO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A32608
+:A32608 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB19 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB19" ;
+        :AlunoId "A32608" ;
+        :AlunoInstrumento "Violoncelo" ;
+        :AlunoNascimento "2000-7-17" ;
+        :AlunoNome "MIGUEL PEDRO DE ALMEIDA FERREIRA CORREIA DOURADO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33195
+:A33195 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS16 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS16" ;
+        :AlunoId "A33195" ;
+        :AlunoInstrumento "Trompa" ;
+        :AlunoNascimento "2004-10-18" ;
+        :AlunoNome "MIGUEL PINTO DE SOUSA MARQUES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A22695
+:A22695 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS5 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS5" ;
+        :AlunoId "A22695" ;
+        :AlunoInstrumento "Fagote" ;
+        :AlunoNascimento "2004-6-23" ;
+        :AlunoNome "NANCY DO SAMEIRO SILVERIO LAVANDEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38216
+:A38216 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB13 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB13" ;
+        :AlunoId "A38216" ;
+        :AlunoInstrumento "Piano" ;
+        :AlunoNascimento "1997-4-19" ;
+        :AlunoNome "NELSON DE SOUSA E SILVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33196
+:A33196 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS8 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS8" ;
+        :AlunoId "A33196" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "2004-5-24" ;
+        :AlunoNome "NELSON FILIPE COELHO DE MOURA SOUSA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33420
+:A33420 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB9 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB9" ;
+        :AlunoId "A33420" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "2000-11-19" ;
+        :AlunoNome "NELSON LEANDRO BARBOSA CARNEIRO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38195
+:A38195 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS12 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS12" ;
+        :AlunoId "A38195" ;
+        :AlunoInstrumento "Percussão" ;
+        :AlunoNascimento "2005-10-12" ;
+        :AlunoNome "NELSON TAVARES CUNHA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33727
+:A33727 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB21 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB21" ;
+        :AlunoId "A33727" ;
+        :AlunoInstrumento "Viola de Arco" ;
+        :AlunoNascimento "1999-5-13" ;
+        :AlunoNome "NUNO FILIPE ANTUNES DA SILVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33127
+:A33127 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB19 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB19" ;
+        :AlunoId "A33127" ;
+        :AlunoInstrumento "Violoncelo" ;
+        :AlunoNascimento "1996-10-16" ;
+        :AlunoNome "NUNO FILIPE MAGALHAES SANTOS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A24784
+:A24784 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB17 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB17" ;
+        :AlunoId "A24784" ;
+        :AlunoInstrumento "Trompete" ;
+        :AlunoNascimento "1996-12-9" ;
+        :AlunoNome "NUNO FILIPE MARQUES MOREIRA RIBEIRO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38208
+:A38208 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB1 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB1" ;
+        :AlunoId "A38208" ;
+        :AlunoInstrumento "Clarinete" ;
+        :AlunoNascimento "1997-8-27" ;
+        :AlunoNome "NUNO GONCALO BETTENCOURT DA CRUZ CORREIA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38203
+:A38203 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS9 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS9" ;
+        :AlunoId "A38203" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "2003-6-23" ;
+        :AlunoNome "NUNO JORGE FERREIRA GUIMARAES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A15619
+:A15619 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS2 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS2" ;
+        :AlunoId "A15619" ;
+        :AlunoInstrumento "Contrabaixo" ;
+        :AlunoNascimento "2002-5-18" ;
+        :AlunoNome "NUNO MIGUEL AFONSO CARVALHO DE MOURA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35355
+:A35355 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB16 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB16" ;
+        :AlunoId "A35355" ;
+        :AlunoInstrumento "Trompa" ;
+        :AlunoNascimento "1998-5-8" ;
+        :AlunoNome "NUNO MIGUEL MACHADO ALVES COSTA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33437
+:A33437 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB22 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB22" ;
+        :AlunoId "A33437" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "2000-10-3" ;
+        :AlunoNome "NUNO MIGUEL MARQUES GOMES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A22701
+:A22701 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB9 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB9" ;
+        :AlunoId "A22701" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "1996-1-17" ;
+        :AlunoNome "NUNO MIGUEL MARTINS CASANOVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A27645
+:A27645 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB3 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB3" ;
+        :AlunoId "A27645" ;
+        :AlunoInstrumento "Corne Inglês" ;
+        :AlunoNascimento "1997-7-13" ;
+        :AlunoNome "NUNO MIGUEL OLIVEIRA SILVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A29282
+:A29282 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB4 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB4" ;
+        :AlunoId "A29282" ;
+        :AlunoInstrumento "Eufónio" ;
+        :AlunoNascimento "1999-11-1" ;
+        :AlunoNome "NUNO VIRIATO MACEDO FERREIRA DE CARVALHO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38120
+:A38120 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS11 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS11" ;
+        :AlunoId "A38120" ;
+        :AlunoInstrumento "Orgão" ;
+        :AlunoNascimento "2004-10-17" ;
+        :AlunoNome "OCTAVIO DAVID DA CONCEICAO JACINTO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A14539
+:A14539 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB16 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB16" ;
+        :AlunoId "A14539" ;
+        :AlunoInstrumento "Trompa" ;
+        :AlunoNascimento "2000-10-6" ;
+        :AlunoNome "ORLANDO JORGE GONCALVES PINTO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33280
+:A33280 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB14 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB14" ;
+        :AlunoId "A33280" ;
+        :AlunoInstrumento "Saxofone" ;
+        :AlunoNascimento "2001-2-7" ;
+        :AlunoNome "PAULO BRUNO DA SILVA VIDES FERNANDES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A34508
+:A34508 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS9 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS9" ;
+        :AlunoId "A34508" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "2004-9-6" ;
+        :AlunoNome "PAULO CESAR ALMEIDA DE SA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A27577
+:A27577 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB11 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB11" ;
+        :AlunoId "A27577" ;
+        :AlunoInstrumento "Orgão" ;
+        :AlunoNascimento "1996-7-18" ;
+        :AlunoNome "PAULO CESAR DE CARVALHO LOPES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A39938
+:A39938 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB5 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB5" ;
+        :AlunoId "A39938" ;
+        :AlunoInstrumento "Fagote" ;
+        :AlunoNascimento "1997-11-15" ;
+        :AlunoNome "PAULO CESAR ROMANEL RODRIGUES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33204
+:A33204 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS8 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS8" ;
+        :AlunoId "A33204" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "2003-2-23" ;
+        :AlunoNome "PAULO EDUARDO MIRANDA CAMPOS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38122
+:A38122 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS19 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS19" ;
+        :AlunoId "A38122" ;
+        :AlunoInstrumento "Violoncelo" ;
+        :AlunoNascimento "2002-10-10" ;
+        :AlunoNome "PAULO JORGE ASSIS DE SOUSA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35357
+:A35357 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS2 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS2" ;
+        :AlunoId "A35357" ;
+        :AlunoInstrumento "Contrabaixo" ;
+        :AlunoNascimento "2004-5-18" ;
+        :AlunoNome "PAULO JORGE FERNANDES DE SOUSA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A30238
+:A30238 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS21 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS21" ;
+        :AlunoId "A30238" ;
+        :AlunoInstrumento "Viola de Arco" ;
+        :AlunoNascimento "2003-11-21" ;
+        :AlunoNome "PAULO JORGE SOARES MENDES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A39407
+:A39407 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS10 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS10" ;
+        :AlunoId "A39407" ;
+        :AlunoInstrumento "Oboé" ;
+        :AlunoNascimento "2003-12-24" ;
+        :AlunoNome "PAULO MANUEL RIBEIRO NOVAIS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33209
+:A33209 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB1 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB1" ;
+        :AlunoId "A33209" ;
+        :AlunoInstrumento "Clarinete" ;
+        :AlunoNascimento "2001-8-7" ;
+        :AlunoNome "PAULO MIGUEL SA MORAIS PIRES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A36476
+:A36476 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB1 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB1" ;
+        :AlunoId "A36476" ;
+        :AlunoInstrumento "Clarinete" ;
+        :AlunoNascimento "1998-10-27" ;
+        :AlunoNome "PEDRO ALEXANDRE FERREIRA VILACA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35360
+:A35360 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB20 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB20" ;
+        :AlunoId "A35360" ;
+        :AlunoInstrumento "Violino" ;
+        :AlunoNascimento "2001-9-24" ;
+        :AlunoNome "PEDRO DANIEL FERREIRA DE CARVALHO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A21711
+:A21711 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB21 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB21" ;
+        :AlunoId "A21711" ;
+        :AlunoInstrumento "Viola de Arco" ;
+        :AlunoNascimento "1999-9-27" ;
+        :AlunoNome "PEDRO DAVID ALVES MARTINHO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A32652
+:A32652 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS15 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS15" ;
+        :AlunoId "A32652" ;
+        :AlunoInstrumento "Trombone" ;
+        :AlunoNascimento "2005-9-18" ;
+        :AlunoNome "PEDRO DUARTE CARDOSO LOPES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A36969
+:A36969 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS17 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS17" ;
+        :AlunoId "A36969" ;
+        :AlunoInstrumento "Trompete" ;
+        :AlunoNascimento "2005-6-16" ;
+        :AlunoNome "PEDRO EMANUEL FERNANDES LOPES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33213
+:A33213 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS6 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS6" ;
+        :AlunoId "A33213" ;
+        :AlunoInstrumento "Flauta" ;
+        :AlunoNascimento "2005-4-14" ;
+        :AlunoNome "PEDRO GUIMARAES DE FREITAS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A30241
+:A30241 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB6 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB6" ;
+        :AlunoId "A30241" ;
+        :AlunoInstrumento "Flauta" ;
+        :AlunoNascimento "1999-6-1" ;
+        :AlunoNome "PEDRO HENRIQUE GONCALVES GERAZ RODRIGUES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33214
+:A33214 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB21 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB21" ;
+        :AlunoId "A33214" ;
+        :AlunoInstrumento "Viola de Arco" ;
+        :AlunoNascimento "1996-10-6" ;
+        :AlunoNome "PEDRO JORGE OSORIO MARINHO OLIVEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38116
+:A38116 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS16 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS16" ;
+        :AlunoId "A38116" ;
+        :AlunoInstrumento "Trompa" ;
+        :AlunoNascimento "2003-3-11" ;
+        :AlunoNome "PEDRO JOSE MARTINS FARIA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35144
+:A35144 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB17 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB17" ;
+        :AlunoId "A35144" ;
+        :AlunoInstrumento "Trompete" ;
+        :AlunoNascimento "1997-8-25" ;
+        :AlunoNome "PEDRO MANUEL DE AMORIM MAGALHAES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38118
+:A38118 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB1 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB1" ;
+        :AlunoId "A38118" ;
+        :AlunoInstrumento "Clarinete" ;
+        :AlunoNascimento "2000-9-21" ;
+        :AlunoNome "PEDRO MANUEL LOPES PATRICIO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A27658
+:A27658 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS3 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS3" ;
+        :AlunoId "A27658" ;
+        :AlunoInstrumento "Corne Inglês" ;
+        :AlunoNascimento "2002-1-20" ;
+        :AlunoNome "PEDRO MIGUEL ARAUJO MOTA LOPES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38159
+:A38159 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS1 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS1" ;
+        :AlunoId "A38159" ;
+        :AlunoInstrumento "Clarinete" ;
+        :AlunoNascimento "2005-6-21" ;
+        :AlunoNome "PEDRO MIGUEL AZEVEDO DE OLIVEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35363
+:A35363 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB11 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB11" ;
+        :AlunoId "A35363" ;
+        :AlunoInstrumento "Orgão" ;
+        :AlunoNascimento "1998-2-14" ;
+        :AlunoNome "PEDRO MIGUEL DA SILVA ARAUJO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A25383
+:A25383 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB12 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB12" ;
+        :AlunoId "A25383" ;
+        :AlunoInstrumento "Percussão" ;
+        :AlunoNascimento "1997-3-8" ;
+        :AlunoNome "PEDRO MIGUEL MARTINS FERNANDES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35364
+:A35364 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB7 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB7" ;
+        :AlunoId "A35364" ;
+        :AlunoInstrumento "Fliscorne" ;
+        :AlunoNascimento "2000-8-16" ;
+        :AlunoNome "PEDRO MIGUEL MEIRA DAS NEVES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33524
+:A33524 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS13 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS13" ;
+        :AlunoId "A33524" ;
+        :AlunoInstrumento "Piano" ;
+        :AlunoNascimento "2004-10-3" ;
+        :AlunoNome "PEDRO MIGUEL PAES MACHADO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35855
+:A35855 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB6 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB6" ;
+        :AlunoId "A35855" ;
+        :AlunoInstrumento "Flauta" ;
+        :AlunoNascimento "2001-3-24" ;
+        :AlunoNome "PEDRO MIGUEL PINTO RIBEIRO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38147
+:A38147 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB19 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB19" ;
+        :AlunoId "A38147" ;
+        :AlunoInstrumento "Violoncelo" ;
+        :AlunoNascimento "1997-3-22" ;
+        :AlunoNome "PEDRO MIGUEL RAMOS MADEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33281
+:A33281 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB22 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB22" ;
+        :AlunoId "A33281" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "2000-2-11" ;
+        :AlunoNome "PEDRO MIGUEL SOARES PINTO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A30243
+:A30243 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB15 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB15" ;
+        :AlunoId "A30243" ;
+        :AlunoInstrumento "Trombone" ;
+        :AlunoNascimento "1999-2-24" ;
+        :AlunoNome "PEDRO MIGUEL VEIGA DA SILVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38149
+:A38149 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS8 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS8" ;
+        :AlunoId "A38149" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "2003-2-8" ;
+        :AlunoNome "PEDRO SILVESTRE MENESES MAGALHAES COELHO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38160
+:A38160 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS17 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS17" ;
+        :AlunoId "A38160" ;
+        :AlunoInstrumento "Trompete" ;
+        :AlunoNascimento "2002-3-7" ;
+        :AlunoNome "PEDRO TIAGO AMORIM DE BRITO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33082
+:A33082 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB20 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB20" ;
+        :AlunoId "A33082" ;
+        :AlunoInstrumento "Violino" ;
+        :AlunoNascimento "1996-4-27" ;
+        :AlunoNome "PEDRO TIAGO DIAS GONCALVES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38154
+:A38154 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB2 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB2" ;
+        :AlunoId "A38154" ;
+        :AlunoInstrumento "Contrabaixo" ;
+        :AlunoNascimento "1998-1-22" ;
+        :AlunoNome "RAFAEL DE CASTRO CARREIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38158
+:A38158 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB9 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB9" ;
+        :AlunoId "A38158" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "1996-7-1" ;
+        :AlunoNome "RAUL GRACIANO OLIVEIRA RODRIGUES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A30015
+:A30015 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS11 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS11" ;
+        :AlunoId "A30015" ;
+        :AlunoInstrumento "Orgão" ;
+        :AlunoNascimento "2002-10-17" ;
+        :AlunoNome "RENATO CESAR ALMEIDA FIGUEIREDO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A39509
+:A39509 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB10 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB10" ;
+        :AlunoId "A39509" ;
+        :AlunoInstrumento "Oboé" ;
+        :AlunoNascimento "1997-4-17" ;
+        :AlunoNome "RICARDO ANDRE RODRIGUES AFONSO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38153
+:A38153 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB7 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB7" ;
+        :AlunoId "A38153" ;
+        :AlunoInstrumento "Fliscorne" ;
+        :AlunoNascimento "1996-2-22" ;
+        :AlunoNome "RICARDO ARAUJO CARVALHO VILACA MOREIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38151
+:A38151 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB11 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB11" ;
+        :AlunoId "A38151" ;
+        :AlunoInstrumento "Orgão" ;
+        :AlunoNascimento "2001-4-5" ;
+        :AlunoNome "RICARDO FERNANDO LIRA DE MESQUITA LACHADO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38129
+:A38129 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS11 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS11" ;
+        :AlunoId "A38129" ;
+        :AlunoInstrumento "Orgão" ;
+        :AlunoNascimento "2003-10-8" ;
+        :AlunoNome "RICARDO GOMES DE FARIA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33222
+:A33222 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB4 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB4" ;
+        :AlunoId "A33222" ;
+        :AlunoInstrumento "Eufónio" ;
+        :AlunoNascimento "1997-7-10" ;
+        :AlunoNome "RICARDO JORGE ALMEIDA DE MAGALHAES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38130
+:A38130 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS9 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS9" ;
+        :AlunoId "A38130" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "2004-10-21" ;
+        :AlunoNome "RICARDO JORGE RODRIGUES SEPULVEDA MARQUES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A34435
+:A34435 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB18 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB18" ;
+        :AlunoId "A34435" ;
+        :AlunoInstrumento "Tuba" ;
+        :AlunoNascimento "1998-8-15" ;
+        :AlunoNome "RICARDO JOSE FERREIRA DIAS DE OLIVEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A19550
+:A19550 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB20 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB20" ;
+        :AlunoId "A19550" ;
+        :AlunoInstrumento "Violino" ;
+        :AlunoNascimento "1997-11-5" ;
+        :AlunoNome "RICARDO MANUEL RODRIGUES DE OLIVEIRA DIMAS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35366
+:A35366 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB5 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB5" ;
+        :AlunoId "A35366" ;
+        :AlunoInstrumento "Fagote" ;
+        :AlunoNascimento "1996-6-14" ;
+        :AlunoNome "RICARDO MANUEL VIANA MAGALHAES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A22721
+:A22721 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS22 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS22" ;
+        :AlunoId "A22721" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "2003-12-20" ;
+        :AlunoNome "RICARDO NUNO MOREIRA CASTILHO FERREIRA LOPES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A30254
+:A30254 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB20 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB20" ;
+        :AlunoId "A30254" ;
+        :AlunoInstrumento "Violino" ;
+        :AlunoNascimento "2001-2-27" ;
+        :AlunoNome "ROQUE MANUEL DE CARVALHO TEIXEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A18770
+:A18770 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS14 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS14" ;
+        :AlunoId "A18770" ;
+        :AlunoInstrumento "Saxofone" ;
+        :AlunoNascimento "2004-9-2" ;
+        :AlunoNome "ROSA ALEXANDRA AZEVEDO GUIMARAES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38141
+:A38141 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB19 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB19" ;
+        :AlunoId "A38141" ;
+        :AlunoInstrumento "Violoncelo" ;
+        :AlunoNascimento "1999-10-20" ;
+        :AlunoNome "RUBEN FILIPE CARDOSO DA FONSECA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38200
+:A38200 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS20 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS20" ;
+        :AlunoId "A38200" ;
+        :AlunoInstrumento "Violino" ;
+        :AlunoNascimento "2003-12-14" ;
+        :AlunoNome "RUI ALEXANDRE SERRANO DE MOURA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A36764
+:A36764 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS2 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS2" ;
+        :AlunoId "A36764" ;
+        :AlunoInstrumento "Contrabaixo" ;
+        :AlunoNascimento "2002-12-8" ;
+        :AlunoNome "RUI ANDRE FERREIRA SILVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38135
+:A38135 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB20 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB20" ;
+        :AlunoId "A38135" ;
+        :AlunoInstrumento "Violino" ;
+        :AlunoNascimento "1997-10-2" ;
+        :AlunoNome "RUI ANDRE LEITE RIBEIRO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A39944
+:A39944 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB9 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB9" ;
+        :AlunoId "A39944" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "2000-5-25" ;
+        :AlunoNome "RUI ANTONIO PEIXOTO DE ABREU" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38148
+:A38148 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB4 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB4" ;
+        :AlunoId "A38148" ;
+        :AlunoInstrumento "Eufónio" ;
+        :AlunoNascimento "1997-4-27" ;
+        :AlunoNome "RUI DOMINGOS GUIMARAES SALGADO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33228
+:A33228 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB16 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB16" ;
+        :AlunoId "A33228" ;
+        :AlunoInstrumento "Trompa" ;
+        :AlunoNascimento "1996-6-20" ;
+        :AlunoNome "RUI FILIPE BARROS TAVARES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38146
+:A38146 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB18 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB18" ;
+        :AlunoId "A38146" ;
+        :AlunoInstrumento "Tuba" ;
+        :AlunoNascimento "1999-6-8" ;
+        :AlunoNome "RUI FILIPE TORRES ALEXANDRE" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38908
+:A38908 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB8 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB8" ;
+        :AlunoId "A38908" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "1996-5-7" ;
+        :AlunoNome "RUI JORGE DE OLIVEIRA PEREIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35371
+:A35371 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB9 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB9" ;
+        :AlunoId "A35371" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "1999-7-7" ;
+        :AlunoNome "RUI JORGE GUIMARAES MACHADO RODRIGUES VALENTE" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A24875
+:A24875 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS19 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS19" ;
+        :AlunoId "A24875" ;
+        :AlunoInstrumento "Violoncelo" ;
+        :AlunoNascimento "2005-11-23" ;
+        :AlunoNome "RUI MANUEL COUTO DA SILVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A37029
+:A37029 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB22 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB22" ;
+        :AlunoId "A37029" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "1996-12-16" ;
+        :AlunoNome "RUI MANUEL DA SILVA PEREIRA NEIVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33229
+:A33229 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB4 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB4" ;
+        :AlunoId "A33229" ;
+        :AlunoInstrumento "Eufónio" ;
+        :AlunoNascimento "2000-1-19" ;
+        :AlunoNome "RUI MANUEL SILVA OLIVEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38119
+:A38119 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS5 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS5" ;
+        :AlunoId "A38119" ;
+        :AlunoInstrumento "Fagote" ;
+        :AlunoNascimento "2005-6-5" ;
+        :AlunoNome "RUI MIGUEL DA SILVA ABREU" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A24876
+:A24876 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB16 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB16" ;
+        :AlunoId "A24876" ;
+        :AlunoInstrumento "Trompa" ;
+        :AlunoNascimento "2000-4-19" ;
+        :AlunoNome "RUI MIGUEL ESCUDEIRO DA COSTA AGUIAR" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A29253
+:A29253 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB9 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB9" ;
+        :AlunoId "A29253" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "1997-2-6" ;
+        :AlunoNome "RUI MIGUEL FERNANDES VARELA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A25868
+:A25868 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB9 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB9" ;
+        :AlunoId "A25868" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "2001-5-10" ;
+        :AlunoNome "RUI MIGUEL MORAIS LOPES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A28735
+:A28735 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS4 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS4" ;
+        :AlunoId "A28735" ;
+        :AlunoInstrumento "Eufónio" ;
+        :AlunoNascimento "2002-6-6" ;
+        :AlunoNome "RUI MIGUEL NOVAIS CASTRO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A27673
+:A27673 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB1 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB1" ;
+        :AlunoId "A27673" ;
+        :AlunoInstrumento "Clarinete" ;
+        :AlunoNascimento "1999-8-13" ;
+        :AlunoNome "RUI MIGUEL PEREIRA OLIVEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35372
+:A35372 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB8 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB8" ;
+        :AlunoId "A35372" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "1997-12-7" ;
+        :AlunoNome "RUI PEDRO ANDIAS DUARTE" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33234
+:A33234 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB4 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB4" ;
+        :AlunoId "A33234" ;
+        :AlunoInstrumento "Eufónio" ;
+        :AlunoNascimento "2000-10-15" ;
+        :AlunoNome "SANDRA MARIA OLIVEIRA CARVALHO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A36765
+:A36765 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB9 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB9" ;
+        :AlunoId "A36765" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "1997-4-18" ;
+        :AlunoNome "SANDRA MARIA TELES FEIO ALMEIDA FAZENDEIRO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38173
+:A38173 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB11 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB11" ;
+        :AlunoId "A38173" ;
+        :AlunoInstrumento "Orgão" ;
+        :AlunoNascimento "1997-12-1" ;
+        :AlunoNome "SEBASTIAO MONTEIRO SIMOES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38183
+:A38183 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB10 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB10" ;
+        :AlunoId "A38183" ;
+        :AlunoInstrumento "Oboé" ;
+        :AlunoNascimento "1998-1-22" ;
+        :AlunoNome "SERGIO BRANCO AMORIM" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33235
+:A33235 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB14 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB14" ;
+        :AlunoId "A33235" ;
+        :AlunoInstrumento "Saxofone" ;
+        :AlunoNascimento "1997-10-25" ;
+        :AlunoNome "SERGIO DE ALMEIDA PAIVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A39343
+:A39343 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS19 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS19" ;
+        :AlunoId "A39343" ;
+        :AlunoInstrumento "Violoncelo" ;
+        :AlunoNascimento "2002-10-23" ;
+        :AlunoNome "SERGIO FELICIANO FERREIRA JACOME" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A39410
+:A39410 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB12 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB12" ;
+        :AlunoId "A39410" ;
+        :AlunoInstrumento "Percussão" ;
+        :AlunoNascimento "1996-5-26" ;
+        :AlunoNome "SERGIO FILIPE PEREIRA DA FELICIDADE" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35374
+:A35374 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB2 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB2" ;
+        :AlunoId "A35374" ;
+        :AlunoInstrumento "Contrabaixo" ;
+        :AlunoNascimento "2000-9-21" ;
+        :AlunoNome "SERGIO MANUEL PEREIRA BARREIRO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A24885
+:A24885 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB9 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB9" ;
+        :AlunoId "A24885" ;
+        :AlunoInstrumento "Harpa" ;
+        :AlunoNascimento "1999-3-2" ;
+        :AlunoNome "SERGIO MANUEL RUIVO CARDOSO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38177
+:A38177 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB4 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB4" ;
+        :AlunoId "A38177" ;
+        :AlunoInstrumento "Eufónio" ;
+        :AlunoNascimento "1999-8-21" ;
+        :AlunoNome "SERGIO NUNO CLARO GOMES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35375
+:A35375 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS20 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS20" ;
+        :AlunoId "A35375" ;
+        :AlunoInstrumento "Violino" ;
+        :AlunoNascimento "2005-5-25" ;
+        :AlunoNome "SERGIO RICARDO TEIXEIRA ANDIAS MIRANDA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38181
+:A38181 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS13 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS13" ;
+        :AlunoId "A38181" ;
+        :AlunoInstrumento "Piano" ;
+        :AlunoNascimento "2003-6-21" ;
+        :AlunoNome "SOFIA DA CONCEICAO ALVES MENDES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33238
+:A33238 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS18 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS18" ;
+        :AlunoId "A33238" ;
+        :AlunoInstrumento "Tuba" ;
+        :AlunoNascimento "2004-7-20" ;
+        :AlunoNome "SONIA ANDREA GARRIDO DE SA EIRAS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35376
+:A35376 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB21 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB21" ;
+        :AlunoId "A35376" ;
+        :AlunoInstrumento "Viola de Arco" ;
+        :AlunoNascimento "1997-3-23" ;
+        :AlunoNome "TELMA DE FATIMA PIRES DE SA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38131
+:A38131 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS21 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS21" ;
+        :AlunoId "A38131" ;
+        :AlunoInstrumento "Viola de Arco" ;
+        :AlunoNascimento "2004-4-15" ;
+        :AlunoNome "TIAGO DANIEL CERQUEIRA BOTELHO DA SILVA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33240
+:A33240 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB21 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB21" ;
+        :AlunoId "A33240" ;
+        :AlunoInstrumento "Viola de Arco" ;
+        :AlunoNascimento "1997-4-9" ;
+        :AlunoNome "TIAGO JORGE GOMES DA SILVA ARAUJO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38144
+:A38144 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB6 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB6" ;
+        :AlunoId "A38144" ;
+        :AlunoInstrumento "Flauta" ;
+        :AlunoNascimento "1999-12-24" ;
+        :AlunoNome "TIAGO LEANDRO DE CASTRO RIBEIRO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38145
+:A38145 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS12 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS12" ;
+        :AlunoId "A38145" ;
+        :AlunoInstrumento "Percussão" ;
+        :AlunoNascimento "2003-12-8" ;
+        :AlunoNome "TIAGO MIGUEL SOARES FERNANDES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A29254
+:A29254 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS8 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS8" ;
+        :AlunoId "A29254" ;
+        :AlunoInstrumento "Guitarra" ;
+        :AlunoNascimento "2002-5-3" ;
+        :AlunoNome "TITO JOSE FERREIRA DE SOUSA LOPES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35418
+:A35418 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB22 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB22" ;
+        :AlunoId "A35418" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "1997-7-11" ;
+        :AlunoNome "VALTER MIGUEL OLIVEIRA VILAR" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38127
+:A38127 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS5 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS5" ;
+        :AlunoId "A38127" ;
+        :AlunoInstrumento "Fagote" ;
+        :AlunoNascimento "2003-11-21" ;
+        :AlunoNome "VANESSA ALZIRA ABRUNHOSA CARNEIRO DE CASTRO FIDALGO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33282
+:A33282 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB17 ;
+        :AlunoAno "2" ;
+        :AlunoCurso "CB17" ;
+        :AlunoId "A33282" ;
+        :AlunoInstrumento "Trompete" ;
+        :AlunoNascimento "2000-5-4" ;
+        :AlunoNome "VIRGILIO ABRANTES VINHA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A30266
+:A30266 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS10 ;
+        :AlunoAno "7" ;
+        :AlunoCurso "CS10" ;
+        :AlunoId "A30266" ;
+        :AlunoInstrumento "Oboé" ;
+        :AlunoNascimento "2002-2-7" ;
+        :AlunoNome "VITOR CARLOS TEIXEIRA PIMENTEL" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35377
+:A35377 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB7 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB7" ;
+        :AlunoId "A35377" ;
+        :AlunoInstrumento "Fliscorne" ;
+        :AlunoNascimento "1996-3-11" ;
+        :AlunoNome "VITOR DA COSTA PINHEIRO" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38192
+:A38192 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS1 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS1" ;
+        :AlunoId "A38192" ;
+        :AlunoInstrumento "Clarinete" ;
+        :AlunoNascimento "2005-12-4" ;
+        :AlunoNome "VITOR HUGO DA SILVA NOGUEIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A35378
+:A35378 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB16 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB16" ;
+        :AlunoId "A35378" ;
+        :AlunoInstrumento "Trompa" ;
+        :AlunoNascimento "1998-3-23" ;
+        :AlunoNome "VITOR HUGO PEREIRA DA SILVA MOREIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A38182
+:A38182 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB22 ;
+        :AlunoAno "4" ;
+        :AlunoCurso "CB22" ;
+        :AlunoId "A38182" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "1998-5-2" ;
+        :AlunoNome "VITOR MANUEL ALVES DA ROCHA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A36773
+:A36773 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS22 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS22" ;
+        :AlunoId "A36773" ;
+        :AlunoInstrumento "Bandolim" ;
+        :AlunoNascimento "2004-6-28" ;
+        :AlunoNome "VITOR MANUEL CARVALHO RODRIGUES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A39671
+:A39671 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB13 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB13" ;
+        :AlunoId "A39671" ;
+        :AlunoInstrumento "Piano" ;
+        :AlunoNascimento "1999-8-9" ;
+        :AlunoNome "VITOR MANUEL PINTO LOPES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A27648
+:A27648 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB4 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB4" ;
+        :AlunoId "A27648" ;
+        :AlunoInstrumento "Eufónio" ;
+        :AlunoNascimento "1996-12-24" ;
+        :AlunoNome "NUNO RAMOS MATOS" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A27620
+:A27620 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB21 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB21" ;
+        :AlunoId "A27620" ;
+        :AlunoInstrumento "Viola de Arco" ;
+        :AlunoNascimento "1997-6-6" ;
+        :AlunoNome "JOAO ANDRE FARIA LOPES" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A33199
+:A33199 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB10 ;
+        :AlunoAno "1" ;
+        :AlunoCurso "CB10" ;
+        :AlunoId "A33199" ;
+        :AlunoInstrumento "Oboé" ;
+        :AlunoNascimento "1999-3-16" ;
+        :AlunoNome "NUNO FILIPE MENDES PEREIRA" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#AE-939
+:AE-939 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS1 ;
+        :AlunoAno "6" ;
+        :AlunoCurso "CS1" ;
+        :AlunoId "AE-939" ;
+        :AlunoInstrumento "Clarinete" ;
+        :AlunoNascimento "2003-6-27" ;
+        :AlunoNome "Jorge Gonzalez y Hurtado de Mendoza" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#AE-922
+:AE-922 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CS6 ;
+        :AlunoAno "8" ;
+        :AlunoCurso "CS6" ;
+        :AlunoId "AE-922" ;
+        :AlunoInstrumento "Flauta" ;
+        :AlunoNascimento "2005-9-17" ;
+        :AlunoNome "Brais Hernandez Facal" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#AE-907
+:AE-907 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB7 ;
+        :AlunoAno "3" ;
+        :AlunoCurso "CB7" ;
+        :AlunoId "AE-907" ;
+        :AlunoInstrumento "Fliscorne" ;
+        :AlunoNascimento "2000-4-20" ;
+        :AlunoNome "Oscar Lopez Garcia" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#A4140
+:A4140 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :estuda :CB14 ;
+        :AlunoAno "5" ;
+        :AlunoCurso "CB14" ;
+        :AlunoId "A4140" ;
+        :AlunoInstrumento "Saxofone" ;
+        :AlunoNascimento "1967-02-01" ;
+        :AlunoNome "José Carlos Ramalho" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CB1
+:CB1 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I1 ;
+     :CursoDesignacao "Curso Básico de Clarinete" ;
+     :CursoDuracao "5" ;
+     :CursoId "CB1" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CS23
+:CS23 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I1 ;
+     :CursoDesignacao "Curso Supletivo de Clarinete" ;
+     :CursoDuracao "3" ;
+     :CursoId "CS23" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CB2
+:CB2 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I2 ;
+     :CursoDesignacao "Curso Básico de Contrabaixo" ;
+     :CursoDuracao "5" ;
+     :CursoId "CB2" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CS24
+:CS24 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I2 ;
+     :CursoDesignacao "Curso Supletivo de Contrabaixo" ;
+     :CursoDuracao "3" ;
+     :CursoId "CS24" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CB3
+:CB3 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I3 ;
+     :CursoDesignacao "Curso Básico de Corne Inglês" ;
+     :CursoDuracao "5" ;
+     :CursoId "CB3" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CS25
+:CS25 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I3 ;
+     :CursoDesignacao "Curso Supletivo de Corne Inglês" ;
+     :CursoDuracao "3" ;
+     :CursoId "CS25" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CB4
+:CB4 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I4 ;
+     :CursoDesignacao "Curso Básico de Eufónio" ;
+     :CursoDuracao "5" ;
+     :CursoId "CB4" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CS26
+:CS26 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I4 ;
+     :CursoDesignacao "Curso Supletivo de Eufónio" ;
+     :CursoDuracao "3" ;
+     :CursoId "CS26" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CB5
+:CB5 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I5 ;
+     :CursoDesignacao "Curso Básico de Fagote" ;
+     :CursoDuracao "5" ;
+     :CursoId "CB5" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CS27
+:CS27 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I5 ;
+     :CursoDesignacao "Curso Supletivo de Fagote" ;
+     :CursoDuracao "3" ;
+     :CursoId "CS27" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CB6
+:CB6 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I6 ;
+     :CursoDesignacao "Curso Básico de Flauta" ;
+     :CursoDuracao "5" ;
+     :CursoId "CB6" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CS28
+:CS28 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I6 ;
+     :CursoDesignacao "Curso Supletivo de Flauta" ;
+     :CursoDuracao "3" ;
+     :CursoId "CS28" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CB7
+:CB7 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I7 ;
+     :CursoDesignacao "Curso Básico de Fliscorne" ;
+     :CursoDuracao "5" ;
+     :CursoId "CB7" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CS29
+:CS29 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I7 ;
+     :CursoDesignacao "Curso Supletivo de Fliscorne" ;
+     :CursoDuracao "3" ;
+     :CursoId "CS29" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CB8
+:CB8 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I8 ;
+     :CursoDesignacao "Curso Básico de Guitarra" ;
+     :CursoDuracao "5" ;
+     :CursoId "CB8" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CS30
+:CS30 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I8 ;
+     :CursoDesignacao "Curso Supletivo de Guitarra" ;
+     :CursoDuracao "3" ;
+     :CursoId "CS30" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CB9
+:CB9 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I9 ;
+     :CursoDesignacao "Curso Básico de Harpa" ;
+     :CursoDuracao "5" ;
+     :CursoId "CB9" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CS31
+:CS31 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I9 ;
+     :CursoDesignacao "Curso Supletivo de Harpa" ;
+     :CursoDuracao "3" ;
+     :CursoId "CS31" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CB10
+:CB10 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I10 ;
+     :CursoDesignacao "Curso Básico de Oboé" ;
+     :CursoDuracao "5" ;
+     :CursoId "CB10" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CS32
+:CS32 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I10 ;
+     :CursoDesignacao "Curso Supletivo de Oboé" ;
+     :CursoDuracao "3" ;
+     :CursoId "CS32" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CB11
+:CB11 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I11 ;
+     :CursoDesignacao "Curso Básico de Orgão" ;
+     :CursoDuracao "5" ;
+     :CursoId "CB11" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CS33
+:CS33 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I11 ;
+     :CursoDesignacao "Curso Supletivo de Orgão" ;
+     :CursoDuracao "3" ;
+     :CursoId "CS33" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CB12
+:CB12 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I12 ;
+     :CursoDesignacao "Curso Básico de Percussão" ;
+     :CursoDuracao "5" ;
+     :CursoId "CB12" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CS34
+:CS34 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I12 ;
+     :CursoDesignacao "Curso Supletivo de Percussão" ;
+     :CursoDuracao "3" ;
+     :CursoId "CS34" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CB13
+:CB13 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I13 ;
+     :CursoDesignacao "Curso Básico de Piano" ;
+     :CursoDuracao "5" ;
+     :CursoId "CB13" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CS35
+:CS35 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I13 ;
+     :CursoDesignacao "Curso Supletivo de Piano" ;
+     :CursoDuracao "3" ;
+     :CursoId "CS35" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CB14
+:CB14 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I14 ;
+     :CursoDesignacao "Curso Básico de Saxofone" ;
+     :CursoDuracao "5" ;
+     :CursoId "CB14" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CS36
+:CS36 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I14 ;
+     :CursoDesignacao "Curso Supletivo de Saxofone" ;
+     :CursoDuracao "3" ;
+     :CursoId "CS36" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CB15
+:CB15 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I15 ;
+     :CursoDesignacao "Curso Básico de Trombone" ;
+     :CursoDuracao "5" ;
+     :CursoId "CB15" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CS37
+:CS37 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I15 ;
+     :CursoDesignacao "Curso Supletivo de Trombone" ;
+     :CursoDuracao "3" ;
+     :CursoId "CS37" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CB16
+:CB16 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I16 ;
+     :CursoDesignacao "Curso Básico de Trompa" ;
+     :CursoDuracao "5" ;
+     :CursoId "CB16" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CS38
+:CS38 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I16 ;
+     :CursoDesignacao "Curso Supletivo de Trompa" ;
+     :CursoDuracao "3" ;
+     :CursoId "CS38" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CB17
+:CB17 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I17 ;
+     :CursoDesignacao "Curso Básico de Trompete" ;
+     :CursoDuracao "5" ;
+     :CursoId "CB17" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CS39
+:CS39 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I17 ;
+     :CursoDesignacao "Curso Supletivo de Trompete" ;
+     :CursoDuracao "3" ;
+     :CursoId "CS39" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CB18
+:CB18 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I18 ;
+     :CursoDesignacao "Curso Básico de Tuba" ;
+     :CursoDuracao "5" ;
+     :CursoId "CB18" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CS40
+:CS40 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I18 ;
+     :CursoDesignacao "Curso Supletivo de Tuba" ;
+     :CursoDuracao "3" ;
+     :CursoId "CS40" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CB19
+:CB19 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I19 ;
+     :CursoDesignacao "Curso Básico de Violoncelo" ;
+     :CursoDuracao "5" ;
+     :CursoId "CB19" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CS41
+:CS41 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I19 ;
+     :CursoDesignacao "Curso Supletivo de Violoncelo" ;
+     :CursoDuracao "3" ;
+     :CursoId "CS41" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CB20
+:CB20 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I20 ;
+     :CursoDesignacao "Curso Básico de Violino" ;
+     :CursoDuracao "5" ;
+     :CursoId "CB20" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CS42
+:CS42 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I20 ;
+     :CursoDesignacao "Curso Supletivo de Violino" ;
+     :CursoDuracao "3" ;
+     :CursoId "CS42" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CB21
+:CB21 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I21 ;
+     :CursoDesignacao "Curso Básico de Viola de Arco" ;
+     :CursoDuracao "5" ;
+     :CursoId "CB21" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CS43
+:CS43 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I21 ;
+     :CursoDesignacao "Curso Supletivo de Viola de Arco" ;
+     :CursoDuracao "3" ;
+     :CursoId "CS43" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CB22
+:CB22 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I22 ;
+     :CursoDesignacao "Curso Básico de Bandolim" ;
+     :CursoDuracao "5" ;
+     :CursoId "CB22" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#CS44
+:CS44 rdf:type owl:NamedIndividual ,
+              :Curso ;
+     :instrumentoEnsinado :I22 ;
+     :CursoDesignacao "Curso Supletivo de Bandolim" ;
+     :CursoDuracao "3" ;
+     :CursoId "CS44" .
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#I1
+:I1 rdf:type owl:NamedIndividual ,
+             :Instrumento ;
+    :InstrumentoId "I1" ;
+    :InstrumentoNome "Clarinete" .
+
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#I2
+:I2 rdf:type owl:NamedIndividual ,
+             :Instrumento ;
+    :InstrumentoId "I2" ;
+    :InstrumentoNome "Contrabaixo" .
+
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#I3
+:I3 rdf:type owl:NamedIndividual ,
+             :Instrumento ;
+    :InstrumentoId "I3" ;
+    :InstrumentoNome "Corne Inglês" .
+
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#I4
+:I4 rdf:type owl:NamedIndividual ,
+             :Instrumento ;
+    :InstrumentoId "I4" ;
+    :InstrumentoNome "Eufónio" .
+
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#I5
+:I5 rdf:type owl:NamedIndividual ,
+             :Instrumento ;
+    :InstrumentoId "I5" ;
+    :InstrumentoNome "Fagote" .
+
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#I6
+:I6 rdf:type owl:NamedIndividual ,
+             :Instrumento ;
+    :InstrumentoId "I6" ;
+    :InstrumentoNome "Flauta" .
+
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#I7
+:I7 rdf:type owl:NamedIndividual ,
+             :Instrumento ;
+    :InstrumentoId "I7" ;
+    :InstrumentoNome "Fliscorne" .
+
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#I8
+:I8 rdf:type owl:NamedIndividual ,
+             :Instrumento ;
+    :InstrumentoId "I8" ;
+    :InstrumentoNome "Guitarra" .
+
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#I9
+:I9 rdf:type owl:NamedIndividual ,
+             :Instrumento ;
+    :InstrumentoId "I9" ;
+    :InstrumentoNome "Harpa" .
+
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#I10
+:I10 rdf:type owl:NamedIndividual ,
+             :Instrumento ;
+    :InstrumentoId "I10" ;
+    :InstrumentoNome "Oboé" .
+
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#I11
+:I11 rdf:type owl:NamedIndividual ,
+             :Instrumento ;
+    :InstrumentoId "I11" ;
+    :InstrumentoNome "Orgão" .
+
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#I12
+:I12 rdf:type owl:NamedIndividual ,
+             :Instrumento ;
+    :InstrumentoId "I12" ;
+    :InstrumentoNome "Percussão" .
+
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#I13
+:I13 rdf:type owl:NamedIndividual ,
+             :Instrumento ;
+    :InstrumentoId "I13" ;
+    :InstrumentoNome "Piano" .
+
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#I14
+:I14 rdf:type owl:NamedIndividual ,
+             :Instrumento ;
+    :InstrumentoId "I14" ;
+    :InstrumentoNome "Saxofone" .
+
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#I15
+:I15 rdf:type owl:NamedIndividual ,
+             :Instrumento ;
+    :InstrumentoId "I15" ;
+    :InstrumentoNome "Trombone" .
+
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#I16
+:I16 rdf:type owl:NamedIndividual ,
+             :Instrumento ;
+    :InstrumentoId "I16" ;
+    :InstrumentoNome "Trompa" .
+
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#I17
+:I17 rdf:type owl:NamedIndividual ,
+             :Instrumento ;
+    :InstrumentoId "I17" ;
+    :InstrumentoNome "Trompete" .
+
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#I18
+:I18 rdf:type owl:NamedIndividual ,
+             :Instrumento ;
+    :InstrumentoId "I18" ;
+    :InstrumentoNome "Tuba" .
+
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#I19
+:I19 rdf:type owl:NamedIndividual ,
+             :Instrumento ;
+    :InstrumentoId "I19" ;
+    :InstrumentoNome "Violoncelo" .
+
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#I20
+:I20 rdf:type owl:NamedIndividual ,
+             :Instrumento ;
+    :InstrumentoId "I20" ;
+    :InstrumentoNome "Violino" .
+
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#I21
+:I21 rdf:type owl:NamedIndividual ,
+             :Instrumento ;
+    :InstrumentoId "I21" ;
+    :InstrumentoNome "Viola de Arco" .
+
+
+
+
+###  http://rpcw.di.uminho.pt/2024/1/untitled-ontology-15#I22
+:I22 rdf:type owl:NamedIndividual ,
+             :Instrumento ;
+    :InstrumentoId "I22" ;
+    :InstrumentoNome "Bandolim" .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
