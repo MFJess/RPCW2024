@@ -1,0 +1,25 @@
+# Quais as cidades de um determinado distrito?
+SELECT ?cidadeNome
+WHERE {
+	?cidade rdf:type :cidade;
+		:cidadeDistrito "Braga" ;
+		:cidadeNome ?cidadeNome .
+}
+
+#Distribuição de cidades por distrito?
+SELECT ?distrito (COUNT(?cidade) AS ?numeroDeCidades)
+WHERE {
+    ?cidade rdf:type :cidade ;
+            :cidadeDistrito ?distrito .
+}
+GROUP BY ?distrito
+
+
+# Quais as cidades com população acima de X.
+SELECT ?cidadeNome ?populacao
+WHERE {
+    ?cidade rdf:type :cidade ;
+            :cidadePopulacao ?populacao ;
+            :cidadeNome ?cidadeNome .
+    FILTER (xsd:integer(?populacao) > 500000)
+}
