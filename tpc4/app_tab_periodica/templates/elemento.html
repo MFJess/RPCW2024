@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <meta charset="utf-8"/>
+        <title> Tabela Periódica: Grupos</title>
+        <link rel="icon" href="{{ url_for('static', filename="faveicon.png") }}"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename="styles/w3.css") }}"/>
+    </header>
+    <body>
+        <div class="w3-card-4">
+            <header class="w3-container w3-purple">
+                <h1> {{data.elemento[0]['elemento_nome']['value']}} </h1>
+            </header>
+
+            <div class="w3-container">
+                <table class="w3-table-all">
+                    <tr>
+                        <th>Elemento</th>
+                        <th>Nome</th>
+                        <th>Número Atómico</th>
+                        <th>Bloco</th>
+                        <th>Peso</th>
+                        <th>Período</th>
+                        <th>Classificação</th>
+                        <th>Estado</th>
+                        <th>Cor</th>
+                    </tr>
+
+                    {% for entry in data.elemento %}
+                    <tr>
+                        <td>{{entry.elemento_simb.value}}</td>
+                        <td>{{entry.elemento_nome.value}}</td>
+                        <td>{{entry.elemento_na.value}}</td>
+                        <td>{{entry.elemento_bloco.value}}</td>
+                        <td>{{entry.elemento_peso.value}}</td>
+                        <td>{{entry.elemento_periodo.value}}</td>
+                        <td>{{entry.elemento_class.value}}</td>
+                        <td>{{entry.elemento_estado.value}}</td>
+                        <td>{{entry.elemento_cor.value}}</td>
+                    </tr>
+                    {% endfor %}
+
+                </table>
+            </div>
+
+            <footer class="w3-container w3-purple">
+                <h5> Gerado por RPCW2024 em {{ data.data }}</h5>
+            </footer>
+        </div>
+    </body>
+</html>
+
