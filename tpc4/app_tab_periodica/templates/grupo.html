@@ -29,7 +29,7 @@
                     {% for entry in data.grupo %}
                     <tr>
                         <td>{{entry.elemento_simb.value}}</td>
-                        <td>{{entry.elemento_nome.value}}</td>
+                        <td><a href="/elementos/{{ entry.elemento_na.value }}">{{entry.nome.value}}</a></td>
                         <td>{{entry.elemento_na.value}}</td>
                         <td>{{entry.elemento_bloco.value}}</td>
                         <td>{{entry.elemento_peso.value}}</td>
