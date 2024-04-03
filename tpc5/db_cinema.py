@@ -57,6 +57,8 @@ while True:
             break  
         all_results.extend(results["results"]["bindings"])
         offset += limit
+    elif response.status_code == 206:
+        continue
     else:
         print("Error:", response.status_code)
         print(response.text)

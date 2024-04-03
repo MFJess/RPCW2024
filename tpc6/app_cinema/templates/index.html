@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <meta charset="utf-8"/>
+        <title> Cinema et all...</title>
+        <link rel="icon" href="{{ url_for('static', filename="cinema.jpg") }}"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename="styles/w3.css") }}"/>
+    </header>
+    <body>
+        <div class="w3-card-4">
+            <header class="w3-container w3-aqua">
+                <h1> Cinema et all... </h1>
+            </header>
+
+            <div class="w3-container">
+                <h3> Existem <span class="white-bold-underline">{{data.quantos[0].totalFilmes.value}}</span> filmes! </h3>
+                <br>
+                <ul class="w3-ul">
+                    <li><a href="/filmes"> Todos os Filmes </a></li>
+                    <li><a href="/generos"> por Género </a></li>
+                    <li><a href="/realizadores"> por Realizador </a></li>
+                    <li><a href="/atores"> por Ator </a></li>
+                </ul>
+            </div>
+
+            <footer class="w3-container w3-aqua">
+                <h5> Gerado por RPCW2024 em {{ data.data }}</h5>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <meta charset="utf-8"/>
+        <title> Filmes </title>
+        <link rel="icon" href="{{ url_for('static', filename="cinema.jpg") }}"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename="styles/w3.css") }}"/>
+        <style>
+            .white-bold-underline {
+                color: indigo;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+            .titles-container {
+                display: flex;
+                justify-content: flex-start;
+            }
+            .titles-container h4 {
+                margin-right: 20px;
+            }
+        </style>
+
+    </header>
+    <body>
+        <div class="w3-card-4">
+            <header class="w3-container w3-aqua">
+                <h1> Todos os filmes </h1>               
+                <br>
+                </div>
+            </header>
+            
+            <div class="w3-container">
+                <table class="w3-table-all">
+                    <tr>
+                        <th>Filme</th>
+                        <th>Título</th>
+                        <th>Descrição</th>
+                        <th>Duração</th>
+                    </tr>
+
+                    {% for entry in data.filmes %}
+                    <tr>
+                        <td>{{entry[0].value}}</td>
+                        <td>{{entry.value}}</td>
+                        <td>{{entry.value}}</td>
+                        <td>{{entry.value}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+
+            <footer class="w3-container w3-aqua">
+                <h5> Gerado por RPCW2024 em {{ data.data }}</h5>
+            </footer>
+        </div>
+    </body>
+</html>
