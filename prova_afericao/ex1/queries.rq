@@ -1,0 +1,77 @@
+# Quantos alunos estão registados?
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <http://rpcw.di.uminho.pt/2024/4/untitled-ontology-24/>
+SELECT (COUNT(DISTINCT(?aluno)) AS ?count)
+WHERE {
+    ?aluno a :Aluno.
+}
+
+# Quantos alunos frequentam o curso "LCC"? (inteiro)
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX tp: <http://rpcw.di.uminho.pt/2024/4/untitled-ontology-24/>
+
+SELECT (COUNT(DISTINCT ?s) AS ?count)
+WHERE {
+    ?s a tp:Aluno ;
+       tp:curso "LCC".
+}
+
+# Que alunos tiveram nota positiva no exame de época normal? 
+# (lista ordenada alfabeticamente por nome com: idAluno, nome, curso, nota do exame);
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX tp: <http://rpcw.di.uminho.pt/2024/4/untitled-ontology-24/>
+PREFIX : <http://rpcw.di.uminho.pt/2024/4/untitled-ontology-24/>
+
+SELECT ?id ?nome ?curso ?nota
+WHERE {
+    ?aluno a tp:Aluno ;
+           tp:fazExame ?exame ;
+    		tp:nomeAluno ?nome ;
+            tp:idAluno ?id ;
+            tp:curso ?curso .   
+    ?exame a tp:ExameEspecial ;
+           tp:exameNota ?nota .
+    FILTER (?nota >= 10)
+} ORDER BY ?nome
+
+# Qual a distribuição dos alunos pelas notas do projeto? 
+# (lista com: nota e número de alunos que obtiveram essa nota)
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX tp: <http://rpcw.di.uminho.pt/2024/4/untitled-ontology-24/>
+
+SELECT ?nota (COUNT(?aluno) AS ?NrAlunos)
+WHERE {
+    ?aluno a tp:Aluno ;
+           tp:projetoNota ?nota .
+}
+GROUP BY ?nota
+ORDER BY ?nota
+
+# Quais os alunos mais trabalhadores durante o semestre? 
+# (lista ordenada por ordem decrescente do total: idAluno, nome, curso, total = somatório dos resultados dos TPC)
+PREFIX tp: <http://rpcw.di.uminho.pt/2024/4/untitled-ontology-24/>
+PREFIX : <http://rpcw.di.uminho.pt/2024/4/untitled-ontology-24/>
+
+SELECT ?id ?nome ?curso (SUM(?tpcs) AS ?totalTPCs) 
+WHERE {
+    ?aluno a :Aluno .
+    ?aluno :idAluno ?id .
+    ?aluno :nomeAluno ?nome .
+    ?aluno :curso ?curso .
+    ?aluno :fazTPC/:notaTPC ?tpcs .
+}
+GROUP BY ?aluno ?id ?nome ?curso
+ORDER BY ?totalTPCs
+
+# Qual a distribuição dos alunos pelos vários cursos? 
+# (lista de cursos, ordenada alfabeticamente por curso, com: curso, número de alunos nesse curso)
+PREFIX tp: <http://rpcw.di.uminho.pt/2024/4/untitled-ontology-24/>
+PREFIX : <http://rpcw.di.uminho.pt/2024/4/untitled-ontology-24/>
+
+SELECT ?curso (COUNT(?aluno) AS ?nrAlunos)
+WHERE {
+    ?aluno a :Aluno ;
+    	tp:curso ?curso .
+}
+GROUP BY ?curso
+ORDER BY ?curso

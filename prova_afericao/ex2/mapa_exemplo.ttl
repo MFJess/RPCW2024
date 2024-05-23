@@ -1,0 +1,137 @@
+@prefix : <http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32/> .
+
+<http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32#pertenceA
+:pertenceA rdf:type owl:ObjectProperty ;
+           owl:inverseOf :temCidade ;
+           rdfs:domain :Cidade ;
+           rdfs:range :Distrito .
+
+
+###  http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32#temCidade
+:temCidade rdf:type owl:ObjectProperty ;
+           rdfs:domain :Distrito ;
+           rdfs:range :Cidade .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32#descricaoCidade
+:descricaoCidade rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Cidade .
+
+
+###  http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32#destinoLigacao
+:destinoLigacao rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Ligacao .
+
+
+###  http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32#distanciaLigacao
+:distanciaLigacao rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Ligacao .
+
+
+###  http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32#distritoCidade
+:distritoCidade rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Cidade .
+
+
+###  http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32#idCidade
+:idCidade rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Cidade .
+
+
+###  http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32#idLigacao
+:idLigacao rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Ligacao .
+
+
+###  http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32#nomeCidade
+:nomeCidade rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Cidade .
+
+
+###  http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32#origemLigacao
+:origemLigacao rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Ligacao .
+
+
+###  http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32#populacaoCidade
+:populacaoCidade rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Cidade .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32#Cidade
+:Cidade rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32#Distrito
+:Distrito rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32#Ligacao
+:Ligacao rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32#Braga
+:Braga rdf:type owl:NamedIndividual ,
+                :Distrito ;
+       :temCidade :Terras_de_Bouro .
+
+
+###  http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32#Paços_de_Ferreira
+:Paços_de_Ferreira rdf:type owl:NamedIndividual ,
+                            :Cidade ;
+                   :pertenceA :Porto ;
+                   :descricaoCidade "Occaecat labore quis et irure nulla Lorem. Exercitation excepteur tempor est ex incididunt sunt id veniam culpa reprehenderit. Qui culpa consectetur quis officia ipsum deserunt cupidatat fugiat. Aute aliquip non sit laborum cillum." ;
+                   :idCidade "c1" ;
+                   :nomeCidade "Paços de Ferreira" ;
+                   :populacaoCidade "400888" .
+
+
+###  http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32#Porto
+:Porto rdf:type owl:NamedIndividual ,
+                :Distrito ;
+       :temCidade :Paços_de_Ferreira .
+
+
+###  http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32#Terras_de_Bouro
+:Terras_de_Bouro rdf:type owl:NamedIndividual ,
+                          :Cidade ;
+                 :pertenceA :Braga ;
+                 :descricaoCidade "Eu laboris tempor anim sunt cillum Lorem culpa ex sit aliquip duis. Exercitation do et magna enim occaecat aute sunt cillum sit. Proident sunt eu sint excepteur et do nulla. Do nisi nisi proident esse mollit anim eiusmod aliquip. Aliqua consequat exercitation consectetur quis labore officia dolor non tempor dolore laboris ullamco reprehenderit. Tempor excepteur in aute ea pariatur reprehenderit. Aliqua velit ex laborum aute." ;
+                 :idCidade "c89" ;
+                 :nomeCidade "Terras_de_Bouro" ;
+                 :populacaoCidade "503416" .
+
+
+###  http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32#l42
+:l42 rdf:type owl:NamedIndividual ,
+              :Ligacao ;
+     :destinoLigacao "c89" ;
+     :distanciaLigacao "244.169"^^xsd:float ;
+     :origemLigacao "c1" .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

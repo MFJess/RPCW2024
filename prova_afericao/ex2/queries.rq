@@ -1,0 +1,53 @@
+
+#Lista de cidades, ordenada alfabeticamente pelo nome;
+
+PREFIX tp: <http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32/>
+PREFIX : <http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32/>
+
+SELECT ?nome
+WHERE {
+    ?cidade a :Cidade ;
+            tp:nomeCidade ?nome .
+}
+ORDER BY ?nome
+
+# Distribuição das cidades por distrito: 
+    # lista de distritos ordenada alfabeticamente em que para cada um se indica quantas cidades tem;
+PREFIX tp: <http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32/>
+PREFIX : <http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32/>
+
+SELECT ?distrito (COUNT(?cidades) AS ?nrCidades)
+WHERE {
+    ?distrito a :Distrito ;
+            tp:temCidade ?cidades .
+}
+GROUP BY ?distrito 
+ORDER BY ?distrito
+
+# Que cidades têm ligações diretas com Braga? (Considera Braga como origem mas também como destino)
+PREFIX tp: <http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32/>
+PREFIX : <http://rpcw.di.uminho.pt/2024/4/untitled-ontology-32/>
+
+SELECT ?cidades
+WHERE {
+  	?cidade tp:nomeCidade "Braga" ;
+    tp:idCidade ?idCidade .
+    
+    {
+        ?bragaOrigem tp:origemLigacao ?idCidade ;
+                     tp:destinoLigacao ?cidades .
+    }
+    UNION
+    {
+        ?bragaDestino tp:destinoLigacao ?idCidade ;
+                      tp:origemLigacao ?cidades .
+    }
+ }
+
+# Partindo de Braga, que cidades se conseguem visitar? (Apresenta uma lista de cidades ordenada alfabeticamente)
+
+
+# Através duma query CONSTRUCT cria uma ligação direta entre Braga e todas as cidades que se conseguem visitar a partir dela.
+
+
+# Através duma query CONSTRUCT cria uma ligação direta entre cada uma das cidades e todas as cidades que se conseguem visitar a partir dela.
